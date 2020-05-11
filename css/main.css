@@ -10,6 +10,17 @@
   height: auto;
   opacity: 0.6; }
 
+.fanny-design {
+  width: 40%; }
+
+.en-quelques-mots h1, .en-quelques-mots p {
+  position: relative;
+  top: 20%; }
+
+.en-quelques-mots img {
+  float: right;
+  width: 50%; }
+
 /*! bulma.io v0.8.2 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
