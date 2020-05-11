@@ -24,14 +24,15 @@
 
 $brown:     #b0a590;
 $yellow:    #fab936;
-$grey:      #5c8a81;
+$grey:      #7d7773;
 $turquoise: #5c8a81;
 $turquoise-lighter: #90b0a1;
 
-$primary: $turquoise-lighter;
-$navbar-background-color: $turquoise-lighter;
-//$primary-invert: $pink-invert;
-
+$primary: $turquoise;
+$navbar-background-color: $primary;
+//$navbar-height: 5rem;
+$navbar-item-color: $white;
+$navbar-item-hover-background-color: $turquoise-lighter;
 
 .has-img-background {
     position: relative;
@@ -45,7 +46,7 @@ $navbar-background-color: $turquoise-lighter;
         top: 0;
         width: 100%;
         height: auto;
-        opacity: 0.5; 
+        opacity: 0.6; 
     }
 }
 
