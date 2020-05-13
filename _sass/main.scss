@@ -50,10 +50,6 @@ $navbar-item-hover-background-color: $turquoise-lighter;
     }
 }
 
-.fanny-design {
-    width: 40%;
-}
-
 .en-quelques-mots {
     h1, p {
         position: relative;
@@ -61,10 +57,21 @@ $navbar-item-hover-background-color: $turquoise-lighter;
     }
     img {
         float: right;
-        width: 50%;
     }
 }
 
 // 4. Import the rest of Bulma
 @import "../node_modules/bulma/bulma";
+
+.has-width-40 {
+    width: 40%;
+}
+
+.has-width-50 {
+    width: 50%;
+}
+
+.has-width-80 {
+    width: 80%;
+}
 
