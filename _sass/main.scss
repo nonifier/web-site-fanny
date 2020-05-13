@@ -39,15 +39,14 @@ $navbar-item-hover-background-color: $grey-light;
     overflow: hidden;
 }
 
-.hero {
-    .img-background {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: auto;
-        opacity: 0.6; 
-    }
+.has-opacity-60 { opacity: 0.6; }
+
+.img-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
 }
 
 .en-quelques-mots {

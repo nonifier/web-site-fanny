@@ -2,13 +2,15 @@
   position: relative;
   overflow: hidden; }
 
-.hero .img-background {
+.has-opacity-60 {
+  opacity: 0.6; }
+
+.img-background {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
-  height: auto;
-  opacity: 0.6; }
+  height: auto; }
 
 .en-quelques-mots h1, .en-quelques-mots p {
   position: relative;
