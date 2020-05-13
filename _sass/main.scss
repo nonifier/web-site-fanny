@@ -63,15 +63,9 @@ $navbar-item-hover-background-color: $turquoise-lighter;
 // 4. Import the rest of Bulma
 @import "../node_modules/bulma/bulma";
 
-.has-width-40 {
-    width: 40%;
-}
-
-.has-width-50 {
-    width: 50%;
-}
-
-.has-width-80 {
-    width: 80%;
-}
+.has-width-40 { width: 40%; }
+.has-width-50 { width: 50%; }
+.has-width-60 { width: 60%; }
+.has-width-70 { width: 70%; }
+.has-width-80 { width: 80%; }
 
