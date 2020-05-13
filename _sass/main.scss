@@ -22,7 +22,7 @@ $grey-light: #90b0a1;
 //$pink: #ff8080;
 //$pink-invert: #fff;
 // Update the sans-serif font family
-//$family-sans-serif: "Helvetica", "Arial", sans-serif;
+$family-sans-serif: "raleway", "Helvetica", "Arial", sans-serif;
 
 
 // 3. Set the derived variables
@@ -91,7 +91,7 @@ $navbar-item-hover-background-color: $grey-light;
 .has-padding-4rem { padding: 4rem; }
 .has-padding-5rem { padding: 5rem; }
 .has-padding-6rem { padding: 6rem; }
-
+ 
 .is-centered {
   display: flex;
   justify-content: center;
