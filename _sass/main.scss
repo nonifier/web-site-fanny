@@ -10,6 +10,12 @@
 @import "../node_modules/bulma/sass/utilities/initial-variables";
 
 // 2. Set your own initial variables
+$brown:     #b0a590;
+$yellow:    #fab936;
+$grey:      #7d7773;
+$turquoise: #5c8a81;
+$grey-light: #90b0a1;
+
 // Update the blue shade, used for links
 //$blue: #06bcef;
 // Add pink and its invert
@@ -22,17 +28,11 @@
 // 3. Set the derived variables
 // Use the new pink as the primary color
 
-$brown:     #b0a590;
-$yellow:    #fab936;
-$grey:      #7d7773;
-$turquoise: #5c8a81;
-$turquoise-lighter: #90b0a1;
-
 $primary: $turquoise;
+
 $navbar-background-color: $primary;
-//$navbar-height: 5rem;
 $navbar-item-color: $white;
-$navbar-item-hover-background-color: $turquoise-lighter;
+$navbar-item-hover-background-color: $grey-light;
 
 .has-img-background {
     position: relative;
@@ -60,6 +60,7 @@ $navbar-item-hover-background-color: $turquoise-lighter;
     }
 }
 
+
 // 4. Import the rest of Bulma
 @import "../node_modules/bulma/bulma";
 
@@ -69,3 +70,30 @@ $navbar-item-hover-background-color: $turquoise-lighter;
 .has-width-70 { width: 70%; }
 .has-width-80 { width: 80%; }
 
+.has-height-40 { height: 40%; }
+.has-height-50 { height: 50%; }
+.has-height-60 { height: 60%; }
+.has-height-70 { height: 70%; }
+.has-height-80 { height: 80%; }
+
+.has-height-10rem { height: 10rem; }
+.has-height-11rem { height: 11rem; }
+.has-height-12rem { height: 12rem; }
+.has-height-13rem { height: 13rem; }
+.has-height-14rem { height: 14rem; }
+
+.has-padding-20 { padding: 20%; }
+.has-padding-25 { padding: 25%; }
+.has-padding-30 { padding: 30%; }
+
+.has-padding-2rem { padding: 2rem; }
+.has-padding-3rem { padding: 3rem; }
+.has-padding-4rem { padding: 4rem; }
+.has-padding-5rem { padding: 5rem; }
+.has-padding-6rem { padding: 6rem; }
+
+.is-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
