@@ -34,12 +34,10 @@ $navbar-background-color: $primary;
 $navbar-item-color: $white;
 $navbar-item-hover-background-color: $grey-light;
 
-.has-img-background {
-    position: relative;
-    overflow: hidden;
-}
-
+.has-opacity-40 { opacity: 0.4; }
+.has-opacity-50 { opacity: 0.5; }
 .has-opacity-60 { opacity: 0.6; }
+.has-opacity-100 { opacity: 1.0; }
 
 .img-background {
     position: absolute;
@@ -95,4 +93,38 @@ $navbar-item-hover-background-color: $grey-light;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.has-text-shadow-black {
+	text-shadow: 0px 0px 50px black;
+}
+.has-hero-background{
+	background: rgba(92, 138, 129, 0.3);
+}
+
+.hero-background {
+	display:	block;
+	position: relative;
+}
+ 
+.hero-background::after {
+    background-image: url("../design/bg/Cactus1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+	content: "";
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;
+}
+
+
+.outer-hero {
+    background-image: url("../design/bg/Cactus2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 40%;
 }
