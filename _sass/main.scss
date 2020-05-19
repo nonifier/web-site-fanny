@@ -34,19 +34,6 @@ $navbar-background-color: $primary;
 $navbar-item-color: $white;
 $navbar-item-hover-background-color: $grey-light;
 
-.has-opacity-40 { opacity: 0.4; }
-.has-opacity-50 { opacity: 0.5; }
-.has-opacity-60 { opacity: 0.6; }
-.has-opacity-100 { opacity: 1.0; }
-
-.img-background {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: auto;
-}
-
 .en-quelques-mots {
     h1, p {
         position: relative;
@@ -60,6 +47,11 @@ $navbar-item-hover-background-color: $grey-light;
 
 // 4. Import the rest of Bulma
 @import "../node_modules/bulma/bulma";
+
+.has-opacity-40 { opacity: 0.4; }
+.has-opacity-50 { opacity: 0.5; }
+.has-opacity-60 { opacity: 0.6; }
+.has-opacity-100 { opacity: 1.0; }
 
 .has-width-40 { width: 40%; }
 .has-width-50 { width: 50%; }
@@ -88,22 +80,18 @@ $navbar-item-hover-background-color: $grey-light;
 .has-padding-4rem { padding: 4rem; }
 .has-padding-5rem { padding: 5rem; }
 .has-padding-6rem { padding: 6rem; }
- 
+
+.is-flex { display: flex; }
 .is-centered {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.has-text-shadow-white {
-	text-shadow: 0px 0px 50px white;
-}
-.has-text-shadow-black {
-	text-shadow: 0px 0px 50px black;
-}
-.has-hero-background{
-	background: rgba(92, 138, 129, 0.3);
-}
+.has-text-shadow-white { text-shadow: 0px 0px 50px white; }
+.has-text-shadow-black { text-shadow: 0px 0px 50px black; }
+
+.has-hero-background{ background: rgba(92, 138, 129, 0.3); } 
 
 .hero-background {
 	display:	block;
@@ -123,7 +111,6 @@ $navbar-item-hover-background-color: $grey-light;
 	position: absolute;
 	z-index: -1;
 }
-
 
 .outer-hero {
 	display:	block;

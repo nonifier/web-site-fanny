@@ -1,22 +1,3 @@
-.has-opacity-40 {
-  opacity: 0.4; }
-
-.has-opacity-50 {
-  opacity: 0.5; }
-
-.has-opacity-60 {
-  opacity: 0.6; }
-
-.has-opacity-100 {
-  opacity: 1.0; }
-
-.img-background {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: auto; }
-
 .en-quelques-mots h1, .en-quelques-mots p {
   position: relative;
   top: 20%; }
@@ -7139,6 +7120,18 @@ label.panel-block {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
+.has-opacity-40 {
+  opacity: 0.4; }
+
+.has-opacity-50 {
+  opacity: 0.5; }
+
+.has-opacity-60 {
+  opacity: 0.6; }
+
+.has-opacity-100 {
+  opacity: 1.0; }
+
 .has-width-40 {
   width: 40%; }
 
@@ -7207,6 +7200,9 @@ label.panel-block {
 
 .has-padding-6rem {
   padding: 6rem; }
+
+.is-flex {
+  display: flex; }
 
 .is-centered {
   display: flex;
