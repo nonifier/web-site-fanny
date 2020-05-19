@@ -81,7 +81,6 @@ $navbar-item-hover-background-color: $grey-light;
 .has-padding-5rem { padding: 5rem; }
 .has-padding-6rem { padding: 6rem; }
 
-.is-flex { display: flex; }
 .is-centered {
   display: flex;
   justify-content: center;
@@ -93,16 +92,9 @@ $navbar-item-hover-background-color: $grey-light;
 
 .has-hero-background{ background: rgba(92, 138, 129, 0.3); } 
 
-.hero-background {
-	display:	block;
-	position: relative;
-}
- 
-.hero-background::after {
-    background-image: url("../design/bg/Cactus1.1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+.has-hero { position: relative; }
+
+.has-hero-img::after {
 	content: "";
 	top: 0;
 	left: 0;
@@ -110,11 +102,13 @@ $navbar-item-hover-background-color: $grey-light;
 	right: 0;
 	position: absolute;
 	z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
-.outer-hero {
-	display:	block;
-	position: relative;
+.hero-background::after {
+    background-image: url("../design/bg/Cactus1.1.jpg");
 }
  
 .outer-hero::after {
@@ -125,15 +119,8 @@ $navbar-item-hover-background-color: $grey-light;
             rgba(144,176,161,0.1),
         ), 
         url("../design/bg/Cactus2.1.jpg");
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: right 40%;
     clip-path: circle(80% at 100vw 70%);
-	content: "";
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	position: absolute;
-	z-index: -1;
 }
+
