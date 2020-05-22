@@ -13,7 +13,7 @@
 $brown:     #b0a590;
 $yellow:    #fab936;
 $grey:      #7d7773;
-$turquoise: #5c8a81;
+$turquoise: #0fa891;
 $grey-light: #90b0a1;
 
 // Update the blue shade, used for links
@@ -48,6 +48,9 @@ $navbar-item-hover-background-color: $grey-light;
 // 4. Import the rest of Bulma
 @import "../node_modules/bulma/bulma";
 
+
+.has-margin-auto { margin: auto; }
+
 .has-opacity-40 { opacity: 0.4; }
 .has-opacity-50 { opacity: 0.5; }
 .has-opacity-60 { opacity: 0.6; }
@@ -81,16 +84,10 @@ $navbar-item-hover-background-color: $grey-light;
 .has-padding-5rem { padding: 5rem; }
 .has-padding-6rem { padding: 6rem; }
 
-.is-centered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .has-text-shadow-white { text-shadow: 0px 0px 50px white; }
 .has-text-shadow-black { text-shadow: 0px 0px 50px black; }
 
-.has-hero-background{ background: rgba(92, 138, 129, 0.3); } 
+.has-hero-background{ background: rgba(50, 138, 129, 0.3); } 
 
 .has-hero { position: relative; }
 
@@ -116,7 +113,7 @@ $navbar-item-hover-background-color: $grey-light;
         linear-gradient(
             to bottom right, 
             rgba(255,255,255,0.4), 
-            rgba(144,176,161,0.1),
+            rgba(44,176,161,0.1),
         ), 
         url("../design/bg/Cactus2.1.jpg");
     background-size: cover;
