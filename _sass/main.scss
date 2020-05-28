@@ -32,8 +32,11 @@ $navbar-item-hover-background-color: $grey-light;
         position: relative;
         top: 20%;
     }
-    img {
-        float: right;
+    img { float: right; }
+    .is-sticky {
+        position: sticky;
+        top: 10em;
+        align-self: flex-start;
     }
 }
 

@@ -5,6 +5,11 @@
 .en-quelques-mots img {
   float: right; }
 
+.en-quelques-mots .is-sticky {
+  position: sticky;
+  top: 10em;
+  align-self: flex-start; }
+
 .competencies .is-child {
   text-align: center; }
 
