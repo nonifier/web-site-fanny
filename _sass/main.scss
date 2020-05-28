@@ -10,25 +10,18 @@
 @import "../node_modules/bulma/sass/utilities/initial-variables";
 
 // 2. Set your own initial variables
-$brown:     #b0a590;
-$yellow:    #fab936;
-$grey:      #7d7773;
-$turquoise: #0fa891;
-$grey-light: #90b0a1;
+$green: #1a6b68;
+$green-light: #3bb7b4;
+$grey: #838383;
+$yellow: #fdc20c;
 
-// Update the blue shade, used for links
-//$blue: #06bcef;
-// Add pink and its invert
-//$pink: #ff8080;
-//$pink-invert: #fff;
 // Update the sans-serif font family
 $family-sans-serif: "raleway", "Helvetica", "Arial", sans-serif;
 
-
 // 3. Set the derived variables
-// Use the new pink as the primary color
-
-$primary: $turquoise;
+$primary: $green-light;
+$warning: $yellow;
+$link: $green;
 
 $navbar-background-color: $primary;
 $navbar-item-color: $white;
