@@ -1,18 +1,17 @@
+.is-sticky {
+  position: sticky;
+  top: 10em;
+  align-self: flex-start; }
+
 .en-quelques-mots h1, .en-quelques-mots p {
   position: relative;
   top: 20%; }
 
-.en-quelques-mots figure {
-  float: right; }
-
 .en-quelques-mots img {
-  max-height: 90vh;
-  max-width: auto; }
+  max-width: 80%; }
 
-.en-quelques-mots .is-sticky {
-  position: sticky;
-  top: 10em;
-  align-self: flex-start; }
+.en-quelques-mots .fanny {
+  float: right; }
 
 .competencies .is-child {
   text-align: center; }

@@ -27,21 +27,19 @@ $navbar-background-color: $primary;
 $navbar-item-color: $white;
 $navbar-item-hover-background-color: $white;
 
+.is-sticky {
+    position: sticky;
+    top: 10em;
+    align-self: flex-start;
+}
+ 
 .en-quelques-mots {
     h1, p {
         position: relative;
         top: 20%;
     }
-    figure { float: right; } 
-    img {
-        max-height: 90vh;
-        max-width: auto;
-    }
-    .is-sticky {
-        position: sticky;
-        top: 10em;
-        align-self: flex-start;
-    }
+    img { max-width: 80%; }
+    .fanny { float: right; }
 }
 
 .competencies {
