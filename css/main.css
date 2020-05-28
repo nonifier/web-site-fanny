@@ -2,8 +2,12 @@
   position: relative;
   top: 20%; }
 
-.en-quelques-mots img {
+.en-quelques-mots figure {
   float: right; }
+
+.en-quelques-mots img {
+  max-height: 90vh;
+  max-width: auto; }
 
 .en-quelques-mots .is-sticky {
   position: sticky;

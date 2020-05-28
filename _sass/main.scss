@@ -32,7 +32,11 @@ $navbar-item-hover-background-color: $white;
         position: relative;
         top: 20%;
     }
-    img { float: right; }
+    figure { float: right; } 
+    img {
+        max-height: 90vh;
+        max-width: auto;
+    }
     .is-sticky {
         position: sticky;
         top: 10em;
