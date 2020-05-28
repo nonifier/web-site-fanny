@@ -7120,6 +7120,10 @@ label.panel-block {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
+.is-256x256 {
+  width: 256px;
+  height: 256px; }
+
 .has-margin-auto {
   margin: auto; }
 
@@ -7165,6 +7169,12 @@ label.panel-block {
 .has-height-80 {
   height: 80%; }
 
+.has-height-90 {
+  height: 90%; }
+
+.has-height-100 {
+  height: 100%; }
+
 .has-height-10rem {
   height: 10rem; }
 
@@ -7179,6 +7189,9 @@ label.panel-block {
 
 .has-height-14rem {
   height: 14rem; }
+
+.has-height-15rem {
+  height: 15rem; }
 
 .has-padding-20 {
   padding: 20%; }

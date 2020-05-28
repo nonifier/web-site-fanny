@@ -48,6 +48,10 @@ $navbar-item-hover-background-color: $grey-light;
 // 4. Import the rest of Bulma
 @import "../node_modules/bulma/bulma";
 
+.is-256x256 {
+    width: 256px;
+    height: 256px;
+}
 
 .has-margin-auto { margin: auto; }
 
@@ -67,12 +71,15 @@ $navbar-item-hover-background-color: $grey-light;
 .has-height-60 { height: 60%; }
 .has-height-70 { height: 70%; }
 .has-height-80 { height: 80%; }
+.has-height-90 { height: 90%; }
+.has-height-100 { height: 100%; }
 
 .has-height-10rem { height: 10rem; }
 .has-height-11rem { height: 11rem; }
 .has-height-12rem { height: 12rem; }
 .has-height-13rem { height: 13rem; }
 .has-height-14rem { height: 14rem; }
+.has-height-15rem { height: 15rem; }
 
 .has-padding-20 { padding: 20%; }
 .has-padding-25 { padding: 25%; }
