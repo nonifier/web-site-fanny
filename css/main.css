@@ -7141,6 +7141,9 @@ label.panel-block {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
+li {
+  margin: 0.5rem auto; }
+
 .is-256x256 {
   width: 256px;
   height: 256px; }
