@@ -5,6 +5,18 @@
 .en-quelques-mots img {
   float: right; }
 
+.competencies .is-child {
+  text-align: center; }
+
+.competencies .notification {
+  padding: 3rem 1.5rem; }
+
+.competencies figure {
+  display: inline-block; }
+
+.competencies img {
+  max-width: 12em; }
+
 /*! bulma.io v0.8.2 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {

@@ -37,6 +37,12 @@ $navbar-item-hover-background-color: $grey-light;
     }
 }
 
+.competencies {
+    .is-child { text-align: center; }
+    .notification { padding: 3rem 1.5rem; }
+    figure { display: inline-block; }
+    img { max-width: 12em; }
+}
 
 // 4. Import the rest of Bulma
 @import "../node_modules/bulma/bulma";
@@ -120,4 +126,5 @@ $navbar-item-hover-background-color: $grey-light;
     background-position: right 40%;
     clip-path: circle(80% at 100vw 70%);
 }
+
 
