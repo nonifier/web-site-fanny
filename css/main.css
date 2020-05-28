@@ -22,6 +22,10 @@
 .competencies img {
   max-width: 12em; }
 
+.is-centered {
+  display: flex;
+  justify-content: center; }
+
 /*! bulma.io v0.8.2 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
@@ -7218,6 +7222,9 @@ label.panel-block {
 
 .has-padding-30 {
   padding: 30%; }
+
+.has-padding-1rem {
+  padding: 1rem; }
 
 .has-padding-2rem {
   padding: 2rem; }

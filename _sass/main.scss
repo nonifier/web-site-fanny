@@ -47,6 +47,11 @@ $navbar-item-hover-background-color: $white;
     img { max-width: 12em; }
 }
 
+.is-centered { 
+    display: flex;
+    justify-content: center;
+}
+
 // 4. Import the rest of Bulma
 @import "../node_modules/bulma/bulma";
 
@@ -87,6 +92,7 @@ $navbar-item-hover-background-color: $white;
 .has-padding-25 { padding: 25%; }
 .has-padding-30 { padding: 30%; }
 
+.has-padding-1rem { padding: 1rem; }
 .has-padding-2rem { padding: 2rem; }
 .has-padding-3rem { padding: 3rem; }
 .has-padding-4rem { padding: 4rem; }
