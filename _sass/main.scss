@@ -54,6 +54,10 @@ $navbar-item-hover-background-color: $white;
     justify-content: center;
 }
 
+.carousel .carousel-item {
+    padding: 3rem;
+
+}
 
 // 4. Import the rest of Bulma
 @import "../node_modules/bulma/bulma";

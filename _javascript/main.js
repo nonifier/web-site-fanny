@@ -2,7 +2,7 @@
 import bulmaCarousel from '../node_modules/bulma-carousel/dist/js/bulma-carousel.js';
 
 let options = {
-    initialSlide: 0,
+    initialSlide: 1,
     navigation:	true, // Display navigation buttons 
     navigationKeys:	true, // Enable navigation with arrow keys
     loop: true,
@@ -10,7 +10,7 @@ let options = {
     effect: 'translate', // translate/fade
     duration: 300, // Transition animation duration (in ms)
     timing: 'ease', // Transiation animation type 
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000, //	Time between each transition when autoplay is active (ms)	
     pauseOnHove: true,
 };

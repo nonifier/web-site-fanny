@@ -29,6 +29,9 @@
   display: flex;
   justify-content: center; }
 
+.carousel .carousel-item {
+  padding: 3rem; }
+
 /*! bulma.io v0.8.2 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
