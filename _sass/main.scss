@@ -57,6 +57,7 @@ $navbar-item-hover-background-color: $white;
 
 // 4. Import the rest of Bulma
 @import "../node_modules/bulma/bulma";
+@import "../node_modules/bulma-carousel/src/sass/index";
 
 li { margin: 0.5rem auto; }
 
@@ -108,7 +109,6 @@ li { margin: 0.5rem auto; }
 .has-text-shadow-black { text-shadow: 0px 0px 50px black; }
 
 .has-hero-background{ background: rgba(50, 138, 129, 0.3); } 
-
 .has-hero { position: relative; }
 
 .has-hero-img::after {
