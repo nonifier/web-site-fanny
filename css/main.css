@@ -32,6 +32,11 @@
 .carousel .carousel-item {
   padding: 3rem; }
 
+#carousel-demo img {
+  object-fit: contain;
+  object-position: center;
+  height: 40vh; }
+
 /*! bulma.io v0.8.2 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {

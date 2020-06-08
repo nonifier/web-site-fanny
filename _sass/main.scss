@@ -56,9 +56,15 @@ $navbar-item-hover-background-color: $white;
 
 .carousel .carousel-item {
     padding: 3rem;
-
 }
 
+#carousel-demo {
+    img {
+        object-fit: contain;
+        object-position: center;
+        height: 40vh;
+    }
+}
 // 4. Import the rest of Bulma
 @import "../node_modules/bulma/bulma";
 @import "../node_modules/bulma-carousel/src/sass/index";
