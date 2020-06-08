@@ -2,7 +2,7 @@
 import bulmaCarousel from '../node_modules/bulma-carousel/dist/js/bulma-carousel.js';
 
 let options = {
-    initialSlide: 1,
+    initialSlide: 0,
     navigation:	true, // Display navigation buttons 
     navigationKeys:	true, // Enable navigation with arrow keys
     loop: true,
