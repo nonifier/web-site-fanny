@@ -1,5 +1,6 @@
 
 import bulmaCarousel from '../node_modules/bulma-carousel/dist/js/bulma-carousel.js';
+import $ from "jquery";
 
 let options = {
     initialSlide: 0,
@@ -27,4 +28,17 @@ if (element && element.bulmaCarousel) {
 // Events 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('Hey my dear Bulma!');
+});
+
+$('#item-1-button').click(function(){ 
+    console.log('Item 1 click');
+    $('#item-1-modal').addClass('is-active');
+});
+
+$('.modal-background').click(function(){
+    $('div.is-active').removeClass('is-active');
+});
+
+$('button.modal-close').click(function(){
+    $('div.is-active').removeClass('is-active');
 });
