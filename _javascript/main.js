@@ -30,15 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('Hey my dear Bulma!');
 });
 
-$('#item-1-button').click(function(){ 
-    console.log('Item 1 click');
-    $('#item-1-modal').addClass('is-active');
-});
+function closeModal(){ $('div.is-active').removeClass('is-active'); }
 
-$('.modal-background').click(function(){
-    $('div.is-active').removeClass('is-active');
-});
-
-$('button.modal-close').click(function(){
-    $('div.is-active').removeClass('is-active');
-});
+$('#item-1-button').click(()=>{ $('#item-1-modal').addClass('is-active') });
+$('#item-2-button').click(()=>{ $('#item-2-modal').addClass('is-active') });
+$('#item-3-button').click(()=>{ $('#item-3-modal').addClass('is-active') });
+$('#item-4-button').click(()=>{ $('#item-4-modal').addClass('is-active') });
+$('#item-5-button').click(()=>{ $('#item-5-modal').addClass('is-active') });
+$('#item-6-button').click(()=>{ $('#item-6-modal').addClass('is-active') });
+$('#item-7-button').click(()=>{ $('#item-7-modal').addClass('is-active') });
+$('.modal-background, button.modal-close').click(closeModal);
