@@ -7154,7 +7154,8 @@ label.panel-block {
 
 .slider {
   position: relative;
-  width: 100%; }
+  width: 100%;
+  overflow: hidden; }
 
 .slider-container {
   display: flex;

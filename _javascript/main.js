@@ -40,3 +40,4 @@ $('#item-5-button').click(()=>{ $('#item-5-modal').addClass('is-active') });
 $('#item-6-button').click(()=>{ $('#item-6-modal').addClass('is-active') });
 $('#item-7-button').click(()=>{ $('#item-7-modal').addClass('is-active') });
 $('.modal-background, button.modal-close').click(closeModal);
+
