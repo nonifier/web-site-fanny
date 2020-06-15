@@ -11,8 +11,8 @@ let options = {
     effect: 'translate', // translate/fade
     duration: 300, // Transition animation duration (in ms)
     timing: 'ease', // Transiation animation type 
-    autoplay: false,
-    autoplaySpeed: 3000, //	Time between each transition when autoplay is active (ms)	
+    autoplay: true,
+    autoplaySpeed: 7000, //	Time between each transition when autoplay is active (ms)	
     pauseOnHove: true,
 };
 
