@@ -170,33 +170,40 @@ body {
     @extend .has-navbar-fixed-top;
 }
 
+nav {
+    @extend .navbar, .is-fixed-top;
+}
+
 #main-title {
-    @extend .hero; 
-    @extend .is-fullheight-with-navbar; 
-    @extend .has-hero; 
-    @extend .has-hero-background;
+    @extend 
+        .hero, 
+        .is-fullheight-with-navbar,
+        .has-hero, 
+        .has-hero-background;
 
     > div {
-        @extend .has-hero-img;
-        @extend .hero-background ;
-        @extend .hero-body ;
-        @extend .is-primary ;
-        @extend .has-margin-auto;
+        @extend 
+            .has-hero-img,
+            .hero-background,
+            .hero-body,
+            .has-margin-auto,
+            .is-primary;
     }
     h1, h2 {
-        @extend .has-text-white;
-        @extend .has-text-shadow-black;
+        @extend .has-text-white, .has-text-shadow-black;
     }
     h1 {
-        @extend .is-1;
-        @extend .is-size-3-mobile;
-        @extend .is-uppercase;
-        @extend .title;
+        @extend 
+            .is-1,
+            .is-size-3-mobile,
+            .is-uppercase,
+            .title;
     }
     h2 {
-        @extend .is-2;
-        @extend .is-capitalized;
-        @extend .is-size-4-mobile;
-        @extend .subtitle;
+        @extend 
+            .is-2,
+            .is-capitalized,
+            .is-size-4-mobile,
+            .subtitle;
     }
 }
