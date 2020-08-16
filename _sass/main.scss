@@ -41,15 +41,6 @@ $box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.2), 0 0px 0 2px rgba(10, 10
     align-self: flex-start;
 }
  
-.en-quelques-mots {
-    h1, p {
-        position: relative;
-        top: 20%;
-    }
-    img { max-width: 80%; }
-    .fanny { float: right; }
-}
-
 .competencies {
     .is-child { text-align: center; }
     .notification { padding: 3rem 1.5rem; }
@@ -183,7 +174,6 @@ nav {
     }
 }
 
-
 #main-title {
     @extend 
         .hero, 
@@ -217,3 +207,17 @@ nav {
             .subtitle;
     }
 }
+
+#en-quelques-mots {
+    @extend .section, .is-medium;
+    h1, p {
+        position: relative;
+        top: 20%;
+    }
+    img { max-width: 80%; }
+    #fanny { 
+        @extend .is-half-touch, .is-one-quarter-desktop;
+        float: right;
+    }
+}
+
