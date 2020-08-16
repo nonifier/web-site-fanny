@@ -4801,7 +4801,8 @@ a.list-item {
     top: 0; }
 
 html.has-navbar-fixed-top,
-body.has-navbar-fixed-top {
+body.has-navbar-fixed-top,
+body {
   padding-top: 3.25rem; }
 
 html.has-navbar-fixed-bottom,

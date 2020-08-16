@@ -166,6 +166,9 @@ li { margin: 0.5rem auto; }
     clip-path: circle(80% at 100vw 70%);
 }
 
+body {
+    @extend .has-navbar-fixed-top;
+}
 
 #main-title {
     @extend .hero; 
