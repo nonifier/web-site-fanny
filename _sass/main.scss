@@ -248,11 +248,9 @@ nav {
     .is-child { text-align: center; }
     .notification { padding: 3rem 1.5rem; }
     figure { 
-		@extend .has-padding-20;
 		display: inline-block; 
 	}
     img { max-width: 12em; }
-	h4 { @extend .title, .is-centered, .has-text-white; }
 	> div {
 		> div {
 			> div:nth-child(1)>div { @extend .is-primary; }
@@ -264,7 +262,6 @@ nav {
 				@extend .tile, .is-parent;
 				> div {
 					@extend .tile, .is-child, .notification;
-					padding: 0;
 					> div {
 						@extend .has-text-centered;
 					}
@@ -272,6 +269,7 @@ nav {
 			}
 		}
 	}
+	h4 { @extend .title, .is-centered, .has-text-white; }
 }
 
 #portfolio {

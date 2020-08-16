@@ -9006,7 +9006,7 @@ li {
 .has-padding-10 {
   padding: 0; }
 
-.has-padding-20, #competencies figure {
+.has-padding-20 {
   padding: 20%; }
 
 .has-padding-25 {
@@ -9087,6 +9087,3 @@ li {
 
 #competencies img {
   max-width: 12em; }
-
-#competencies > div > div > div > div {
-  padding: 0; }
