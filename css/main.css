@@ -67,7 +67,7 @@
   transform-origin: center;
   width: 0.625em; }
 
-.box:not(:last-child), #carousel-demo:not(:last-child), .content:not(:last-child), .notification:not(:last-child), .progress:not(:last-child), .table:not(:last-child), .table-container:not(:last-child), .title:not(:last-child), h1:not(:last-child),
+.box:not(:last-child), #carousel-demo:not(:last-child), .content:not(:last-child), p:not(:last-child), .notification:not(:last-child), .progress:not(:last-child), .table:not(:last-child), .table-container:not(:last-child), .title:not(:last-child), h1:not(:last-child),
 .subtitle:not(:last-child), h2:not(:last-child), h3:not(:last-child), h4:not(:last-child), h5:not(:last-child), #main-title h2:not(:last-child), .block:not(:last-child), .highlight:not(:last-child), .breadcrumb:not(:last-child), .level:not(:last-child), .list:not(:last-child), .message:not(:last-child), .pagination:not(:last-child), .tabs:not(:last-child) {
   margin-bottom: 1.5rem; }
 
@@ -2122,149 +2122,177 @@ a.box:active, a#carousel-demo:active {
     .container {
       max-width: 1344px; } }
 
-.content li + li {
+.content li + li, p li + li {
   margin-top: 0.25em; }
 
-.content p:not(:last-child),
+.content p:not(:last-child), p p:not(:last-child),
 .content dl:not(:last-child),
+p dl:not(:last-child),
 .content ol:not(:last-child),
+p ol:not(:last-child),
 .content ul:not(:last-child),
+p ul:not(:last-child),
 .content blockquote:not(:last-child),
+p blockquote:not(:last-child),
 .content pre:not(:last-child),
-.content table:not(:last-child) {
+p pre:not(:last-child),
+.content table:not(:last-child),
+p table:not(:last-child) {
   margin-bottom: 1em; }
 
-.content h1,
+.content h1, p h1,
 .content h2,
+p h2,
 .content h3,
+p h3,
 .content h4,
+p h4,
 .content h5,
-.content h6 {
+p h5,
+.content h6,
+p h6 {
   color: #363636;
   font-weight: 600;
   line-height: 1.125; }
 
-.content h1 {
+.content h1, p h1 {
   font-size: 2em;
   margin-bottom: 0.5em; }
-  .content h1:not(:first-child) {
+  .content h1:not(:first-child), p h1:not(:first-child) {
     margin-top: 1em; }
 
-.content h2 {
+
+.content h2,
+p h2 {
   font-size: 1.75em;
   margin-bottom: 0.5714em; }
-  .content h2:not(:first-child) {
+  .content h2:not(:first-child), p h2:not(:first-child) {
     margin-top: 1.1428em; }
 
-.content h3 {
+
+.content h3,
+p h3 {
   font-size: 1.5em;
   margin-bottom: 0.6666em; }
-  .content h3:not(:first-child) {
+  .content h3:not(:first-child), p h3:not(:first-child) {
     margin-top: 1.3333em; }
 
-.content h4 {
+
+.content h4,
+p h4 {
   font-size: 1.25em;
   margin-bottom: 0.8em; }
 
-.content h5 {
+
+.content h5,
+p h5 {
   font-size: 1.125em;
   margin-bottom: 0.8888em; }
 
-.content h6 {
+
+.content h6,
+p h6 {
   font-size: 1em;
   margin-bottom: 1em; }
 
-.content blockquote {
+.content blockquote, p blockquote {
   background-color: whitesmoke;
   border-left: 5px solid #dbdbdb;
   padding: 1.25em 1.5em; }
 
-.content ol {
+.content ol, p ol {
   list-style-position: outside;
   margin-left: 2em;
   margin-top: 1em; }
-  .content ol:not([type]) {
+  .content ol:not([type]), p ol:not([type]) {
     list-style-type: decimal; }
-    .content ol:not([type]).is-lower-alpha {
+    .content ol:not([type]).is-lower-alpha, p ol:not([type]).is-lower-alpha {
       list-style-type: lower-alpha; }
-    .content ol:not([type]).is-lower-roman {
+    .content ol:not([type]).is-lower-roman, p ol:not([type]).is-lower-roman {
       list-style-type: lower-roman; }
-    .content ol:not([type]).is-upper-alpha {
+    .content ol:not([type]).is-upper-alpha, p ol:not([type]).is-upper-alpha {
       list-style-type: upper-alpha; }
-    .content ol:not([type]).is-upper-roman {
+    .content ol:not([type]).is-upper-roman, p ol:not([type]).is-upper-roman {
       list-style-type: upper-roman; }
 
-.content ul {
+.content ul, p ul {
   list-style: disc outside;
   margin-left: 2em;
   margin-top: 1em; }
-  .content ul ul {
+  .content ul ul, p ul ul {
     list-style-type: circle;
     margin-top: 0.5em; }
-    .content ul ul ul {
+    .content ul ul ul, p ul ul ul {
       list-style-type: square; }
 
-.content dd {
+.content dd, p dd {
   margin-left: 2em; }
 
-.content figure {
+.content figure, p figure {
   margin-left: 2em;
   margin-right: 2em;
   text-align: center; }
-  .content figure:not(:first-child) {
+  .content figure:not(:first-child), p figure:not(:first-child) {
     margin-top: 2em; }
-  .content figure:not(:last-child) {
+  .content figure:not(:last-child), p figure:not(:last-child) {
     margin-bottom: 2em; }
-  .content figure img {
+  .content figure img, p figure img {
     display: inline-block; }
-  .content figure figcaption {
+  .content figure figcaption, p figure figcaption {
     font-style: italic; }
 
-.content pre {
+.content pre, p pre {
   -webkit-overflow-scrolling: touch;
   overflow-x: auto;
   padding: 1.25em 1.5em;
   white-space: pre;
   word-wrap: normal; }
 
-.content sup,
-.content sub {
+.content sup, p sup,
+.content sub,
+p sub {
   font-size: 75%; }
 
-.content table {
+.content table, p table {
   width: 100%; }
-  .content table td,
-  .content table th {
+  .content table td, p table td,
+  .content table th,
+  p table th {
     border: 1px solid #dbdbdb;
     border-width: 0 0 1px;
     padding: 0.5em 0.75em;
     vertical-align: top; }
-  .content table th {
+  
+  .content table th,
+  p table th {
     color: #363636; }
-    .content table th:not([align]) {
+    .content table th:not([align]), p table th:not([align]) {
       text-align: left; }
-  .content table thead td,
-  .content table thead th {
+  .content table thead td, p table thead td,
+  .content table thead th,
+  p table thead th {
     border-width: 0 0 2px;
     color: #363636; }
-  .content table tfoot td,
-  .content table tfoot th {
+  .content table tfoot td, p table tfoot td,
+  .content table tfoot th,
+  p table tfoot th {
     border-width: 2px 0 0;
     color: #363636; }
-  .content table tbody tr:last-child td,
-  .content table tbody tr:last-child th {
+  .content table tbody tr:last-child td, p table tbody tr:last-child td,
+  .content table tbody tr:last-child th,
+  p table tbody tr:last-child th {
     border-bottom-width: 0; }
 
-.content .tabs li + li {
+.content .tabs li + li, p .tabs li + li {
   margin-top: 0; }
 
-.content.is-small {
+.content.is-small, p.is-small {
   font-size: 0.75rem; }
 
-.content.is-medium, .content#en-quelques-mots {
+.content.is-medium, p.is-medium, p#en-quelques-mots, .content#en-quelques-mots {
   font-size: 1.25rem; }
 
-.content.is-large {
+.content.is-large, p.is-large {
   font-size: 1.5rem; }
 
 .icon {
@@ -2408,7 +2436,8 @@ a.box:active, a#carousel-demo:active {
   .notification h5,
   .notification #main-title h2,
   #main-title .notification h2,
-  .notification .content {
+  .notification .content,
+  .notification p {
     color: currentColor; }
   .notification.is-white {
     background-color: white;
@@ -4108,13 +4137,13 @@ a.list-item {
   align-items: flex-start;
   display: flex;
   text-align: left; }
-  .media .content:not(:last-child) {
+  .media .content:not(:last-child), .media p:not(:last-child) {
     margin-bottom: 0.75rem; }
   .media .media {
     border-top: 1px solid rgba(219, 219, 219, 0.5);
     display: flex;
     padding-top: 0.75rem; }
-    .media .media .content:not(:last-child),
+    .media .media .content:not(:last-child), .media .media p:not(:last-child),
     .media .media .control:not(:last-child) {
       margin-bottom: 0.5rem; }
     .media .media .media {

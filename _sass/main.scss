@@ -165,6 +165,7 @@ h2 { @extend .subtitle, .is-2, .is-size-4-mobile; }
 h3 { @extend .subtitle, .is-3, .is-size-5-mobile; }
 h4 { @extend .subtitle, .is-4, .is-size-6-mobile; }
 h5 { @extend .subtitle, .is-5, .is-size-7-mobile; }
+p { @extend .content; }
 
 section > div > h1:first-child {
     @extend .is-uppercase;
