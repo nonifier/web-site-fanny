@@ -67,8 +67,8 @@
   transform-origin: center;
   width: 0.625em; }
 
-.box:not(:last-child), #carousel-demo:not(:last-child), .content:not(:last-child), .notification:not(:last-child), .progress:not(:last-child), .table:not(:last-child), .table-container:not(:last-child), .title:not(:last-child), #main-title h1:not(:last-child),
-.subtitle:not(:last-child), #main-title h2:not(:last-child), .block:not(:last-child), .highlight:not(:last-child), .breadcrumb:not(:last-child), .level:not(:last-child), .list:not(:last-child), .message:not(:last-child), .pagination:not(:last-child), .tabs:not(:last-child) {
+.box:not(:last-child), #carousel-demo:not(:last-child), .content:not(:last-child), .notification:not(:last-child), .progress:not(:last-child), .table:not(:last-child), .table-container:not(:last-child), .title:not(:last-child), h1:not(:last-child), #main-title h1:not(:last-child),
+.subtitle:not(:last-child), h2:not(:last-child), h3:not(:last-child), h4:not(:last-child), h5:not(:last-child), #main-title h2:not(:last-child), .block:not(:last-child), .highlight:not(:last-child), .breadcrumb:not(:last-child), .level:not(:last-child), .list:not(:last-child), .message:not(:last-child), .pagination:not(:last-child), .tabs:not(:last-child) {
   margin-bottom: 1.5rem; }
 
 .delete, .modal-close {
@@ -469,7 +469,7 @@ table th {
     font-size: 1.25rem !important; }
   .is-size-6-mobile, h4 {
     font-size: 1rem !important; }
-  .is-size-7-mobile {
+  .is-size-7-mobile, h5 {
     font-size: 0.75rem !important; } }
 
 @media screen and (min-width: 769px), print {
@@ -714,7 +714,7 @@ table th {
 .is-lowercase {
   text-transform: lowercase !important; }
 
-.is-uppercase, #main-title h1 {
+.is-uppercase, section > div > h1:first-child, #main-title h1 {
   text-transform: uppercase !important; }
 
 .is-italic {
@@ -2400,8 +2400,12 @@ a.box:active, a#carousel-demo:active {
     position: absolute;
     right: 0.5rem;
     top: 0.5rem; }
-  .notification .title, .notification #main-title h1, #main-title .notification h1,
+  .notification .title, .notification h1, .notification #main-title h1, #main-title .notification h1,
   .notification .subtitle,
+  .notification h2,
+  .notification h3,
+  .notification h4,
+  .notification h5,
   .notification #main-title h2,
   #main-title .notification h2,
   .notification .content {
@@ -2857,83 +2861,112 @@ a.box:active, a#carousel-demo:active {
 a.tag:hover {
   text-decoration: underline; }
 
-.title, #main-title h1,
+.title, h1, #main-title h1,
 .subtitle,
+h2,
+h3,
+h4,
+h5,
 #main-title h2 {
   word-break: break-word; }
-  .title em, #main-title h1 em,
+  .title em, h1 em, #main-title h1 em,
   .title span,
+  h1 span,
   #main-title h1 span,
   .subtitle em,
+  h2 em,
+  h3 em,
+  h4 em,
+  h5 em,
   #main-title h2 em,
   .subtitle span,
+  h2 span,
+  h3 span,
+  h4 span,
+  h5 span,
   #main-title h2 span {
     font-weight: inherit; }
-  .title sub, #main-title h1 sub,
+  .title sub, h1 sub, #main-title h1 sub,
   .subtitle sub,
+  h2 sub,
+  h3 sub,
+  h4 sub,
+  h5 sub,
   #main-title h2 sub {
     font-size: 0.75em; }
-  .title sup, #main-title h1 sup,
+  .title sup, h1 sup, #main-title h1 sup,
   .subtitle sup,
+  h2 sup,
+  h3 sup,
+  h4 sup,
+  h5 sup,
   #main-title h2 sup {
     font-size: 0.75em; }
-  .title .tag, #main-title h1 .tag,
+  .title .tag, h1 .tag, #main-title h1 .tag,
   .subtitle .tag,
+  h2 .tag,
+  h3 .tag,
+  h4 .tag,
+  h5 .tag,
   #main-title h2 .tag {
     vertical-align: middle; }
 
-.title, #main-title h1 {
+.title, h1, #main-title h1 {
   color: #363636;
   font-size: 2rem;
   font-weight: 600;
   line-height: 1.125; }
-  .title strong, #main-title h1 strong {
+  .title strong, h1 strong, #main-title h1 strong {
     color: inherit;
     font-weight: inherit; }
-  .title + .highlight, #main-title h1 + .highlight {
+  .title + .highlight, h1 + .highlight, #main-title h1 + .highlight {
     margin-top: -0.75rem; }
-  .title:not(.is-spaced) + .subtitle, #main-title h1:not(.is-spaced) + .subtitle, #main-title .title:not(.is-spaced) + h2, #main-title h1:not(.is-spaced) + h2 {
+  .title:not(.is-spaced) + .subtitle, h1:not(.is-spaced) + .subtitle, #main-title h1:not(.is-spaced) + .subtitle, .title:not(.is-spaced) + h2, h1:not(.is-spaced) + h2, .title:not(.is-spaced) + h3, h1:not(.is-spaced) + h3, #main-title h1:not(.is-spaced) + h3, .title:not(.is-spaced) + h4, h1:not(.is-spaced) + h4, #main-title h1:not(.is-spaced) + h4, .title:not(.is-spaced) + h5, h1:not(.is-spaced) + h5, #main-title h1:not(.is-spaced) + h5, #main-title .title:not(.is-spaced) + h2, #main-title h1:not(.is-spaced) + h2 {
     margin-top: -1.25rem; }
-  .title.is-1, h1.title, #main-title h1 {
+  .title.is-1, h1, #main-title h1 {
     font-size: 3rem; }
-  .title.is-2, h2.title, #main-title h1.is-2 {
+  .title.is-2, h1.is-2, h2.title, #main-title h1.is-2 {
     font-size: 2.5rem; }
-  .title.is-3, h3.title, #main-title h1.is-3 {
+  .title.is-3, h1.is-3, h3.title, #main-title h1.is-3 {
     font-size: 2rem; }
-  .title.is-4, h4.title, #main-title h1.is-4 {
+  .title.is-4, h1.is-4, h4.title, #main-title h1.is-4 {
     font-size: 1.5rem; }
-  .title.is-5, #main-title h1.is-5 {
+  .title.is-5, h1.is-5, h5.title, #main-title h1.is-5 {
     font-size: 1.25rem; }
-  .title.is-6, #main-title h1.is-6 {
+  .title.is-6, h1.is-6, #main-title h1.is-6 {
     font-size: 1rem; }
-  .title.is-7, #main-title h1.is-7 {
+  .title.is-7, h1.is-7, #main-title h1.is-7 {
     font-size: 0.75rem; }
 
 
 .subtitle,
+h2,
+h3,
+h4,
+h5,
 #main-title h2 {
   color: #4a4a4a;
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.25; }
-  .subtitle strong, #main-title h2 strong {
+  .subtitle strong, h2 strong, h3 strong, h4 strong, h5 strong, #main-title h2 strong {
     color: #363636;
     font-weight: 600; }
-  .subtitle:not(.is-spaced) + .title, #main-title h2:not(.is-spaced) + .title, #main-title .subtitle:not(.is-spaced) + h1, #main-title h2:not(.is-spaced) + h1 {
+  .subtitle:not(.is-spaced) + .title, h2:not(.is-spaced) + .title, h3:not(.is-spaced) + .title, h4:not(.is-spaced) + .title, h5:not(.is-spaced) + .title, #main-title h2:not(.is-spaced) + .title, .subtitle:not(.is-spaced) + h1, h2:not(.is-spaced) + h1, h3:not(.is-spaced) + h1, h4:not(.is-spaced) + h1, h5:not(.is-spaced) + h1, #main-title .subtitle:not(.is-spaced) + h1, #main-title h3:not(.is-spaced) + h1, #main-title h4:not(.is-spaced) + h1, #main-title h5:not(.is-spaced) + h1, #main-title h2:not(.is-spaced) + h1 {
     margin-top: -1.25rem; }
-  .subtitle.is-1, h1.subtitle, #main-title h2.is-1 {
+  .subtitle.is-1, h1.subtitle, h2.is-1, h3.is-1, h4.is-1, h5.is-1, #main-title h2.is-1 {
     font-size: 3rem; }
-  .subtitle.is-2, h2.subtitle, #main-title h2 {
+  .subtitle.is-2, h2, h3.is-2, h4.is-2, h5.is-2, #main-title h2 {
     font-size: 2.5rem; }
-  .subtitle.is-3, h3.subtitle, #main-title h2.is-3 {
+  .subtitle.is-3, h2.is-3, h3, h4.is-3, h5.is-3, #main-title h2.is-3 {
     font-size: 2rem; }
-  .subtitle.is-4, h4.subtitle, #main-title h2.is-4 {
+  .subtitle.is-4, h2.is-4, h3.is-4, h4, h5.is-4, #main-title h2.is-4 {
     font-size: 1.5rem; }
-  .subtitle.is-5, #main-title h2.is-5 {
+  .subtitle.is-5, h2.is-5, h3.is-5, h4.is-5, h5, #main-title h2.is-5 {
     font-size: 1.25rem; }
-  .subtitle.is-6, #main-title h2.is-6 {
+  .subtitle.is-6, h2.is-6, h3.is-6, h4.is-6, h5.is-6, #main-title h2.is-6 {
     font-size: 1rem; }
-  .subtitle.is-7, #main-title h2.is-7 {
+  .subtitle.is-7, h2.is-7, h3.is-7, h4.is-7, h5.is-7, #main-title h2.is-7 {
     font-size: 0.75rem; }
 
 .heading {
@@ -4003,8 +4036,12 @@ button.dropdown-item {
   flex-grow: 0;
   flex-shrink: 0;
   justify-content: center; }
-  .level-item .title, .level-item #main-title h1, #main-title .level-item h1,
+  .level-item .title, .level-item h1, .level-item #main-title h1, #main-title .level-item h1,
   .level-item .subtitle,
+  .level-item h2,
+  .level-item h3,
+  .level-item h4,
+  .level-item h5,
   .level-item #main-title h2,
   #main-title .level-item h2 {
     margin-bottom: 0; }
@@ -6606,7 +6643,7 @@ label.panel-block {
     width: 33.33333%; }
   .columns.is-mobile > .column.is-offset-4 {
     margin-left: 33.33333%; }
-  .columns.is-mobile > .column.is-5 {
+  .columns.is-mobile > .column.is-5, .columns.is-mobile > h5.column {
     flex: none;
     width: 41.66667%; }
   .columns.is-mobile > .column.is-offset-5 {
@@ -6838,7 +6875,7 @@ label.panel-block {
       width: 33.33333%; }
     .column.is-offset-4, .column.is-offset-4-tablet {
       margin-left: 33.33333%; }
-    .column.is-5, .column.is-5-tablet {
+    .column.is-5, h5.column, .column.is-5-tablet {
       flex: none;
       width: 41.66667%; }
     .column.is-offset-5, .column.is-offset-5-tablet {
@@ -7529,7 +7566,7 @@ label.panel-block {
   @media screen and (min-width: 1408px) {
     .columns.is-variable.is-4-fullhd {
       --columnGap: 1rem; } }
-  .columns.is-variable.is-5 {
+  .columns.is-variable.is-5, h5.columns.is-variable {
     --columnGap: 1.25rem; }
   @media screen and (max-width: 768px) {
     .columns.is-variable.is-5-mobile {
@@ -7684,7 +7721,7 @@ label.panel-block {
     .tile.is-4, h4.tile {
       flex: none;
       width: 33.33333%; }
-    .tile.is-5 {
+    .tile.is-5, h5.tile {
       flex: none;
       width: 41.66667%; }
     .tile.is-6 {
@@ -7725,13 +7762,20 @@ label.panel-block {
     .hero.is-white strong,
     .is-white#main-title strong {
       color: inherit; }
-    .hero.is-white .title, .is-white#main-title .title, .hero.is-white #main-title h1, #main-title .hero.is-white h1, .is-white#main-title h1 {
+    .hero.is-white .title, .is-white#main-title .title, .hero.is-white h1, .hero.is-white #main-title h1, #main-title .hero.is-white h1, .is-white#main-title h1 {
       color: #0a0a0a; }
-    .hero.is-white .subtitle, .is-white#main-title .subtitle, .hero.is-white #main-title h2, #main-title .hero.is-white h2, .is-white#main-title h2 {
+    .hero.is-white .subtitle, .is-white#main-title .subtitle, .hero.is-white h2, .hero.is-white h3, .is-white#main-title h3, .hero.is-white h4, .is-white#main-title h4, .hero.is-white h5, .is-white#main-title h5, .hero.is-white #main-title h2, #main-title .hero.is-white h2, .is-white#main-title h2 {
       color: rgba(10, 10, 10, 0.9); }
-      .hero.is-white .subtitle a:not(.button), .is-white#main-title .subtitle a:not(.button), .hero.is-white #main-title h2 a:not(.button), #main-title .hero.is-white h2 a:not(.button), .is-white#main-title h2 a:not(.button),
+      .hero.is-white .subtitle a:not(.button), .is-white#main-title .subtitle a:not(.button), .hero.is-white h2 a:not(.button), .hero.is-white h3 a:not(.button), .is-white#main-title h3 a:not(.button), .hero.is-white h4 a:not(.button), .is-white#main-title h4 a:not(.button), .hero.is-white h5 a:not(.button), .is-white#main-title h5 a:not(.button), .hero.is-white #main-title h2 a:not(.button), #main-title .hero.is-white h2 a:not(.button), .is-white#main-title h2 a:not(.button),
       .hero.is-white .subtitle strong,
       .is-white#main-title .subtitle strong,
+      .hero.is-white h2 strong,
+      .hero.is-white h3 strong,
+      .is-white#main-title h3 strong,
+      .hero.is-white h4 strong,
+      .is-white#main-title h4 strong,
+      .hero.is-white h5 strong,
+      .is-white#main-title h5 strong,
       .hero.is-white #main-title h2 strong,
       #main-title .hero.is-white h2 strong,
       .is-white#main-title h2 strong {
@@ -7777,13 +7821,20 @@ label.panel-block {
     .hero.is-black strong,
     .is-black#main-title strong {
       color: inherit; }
-    .hero.is-black .title, .is-black#main-title .title, .hero.is-black #main-title h1, #main-title .hero.is-black h1, .is-black#main-title h1 {
+    .hero.is-black .title, .is-black#main-title .title, .hero.is-black h1, .hero.is-black #main-title h1, #main-title .hero.is-black h1, .is-black#main-title h1 {
       color: white; }
-    .hero.is-black .subtitle, .is-black#main-title .subtitle, .hero.is-black #main-title h2, #main-title .hero.is-black h2, .is-black#main-title h2 {
+    .hero.is-black .subtitle, .is-black#main-title .subtitle, .hero.is-black h2, .hero.is-black h3, .is-black#main-title h3, .hero.is-black h4, .is-black#main-title h4, .hero.is-black h5, .is-black#main-title h5, .hero.is-black #main-title h2, #main-title .hero.is-black h2, .is-black#main-title h2 {
       color: rgba(255, 255, 255, 0.9); }
-      .hero.is-black .subtitle a:not(.button), .is-black#main-title .subtitle a:not(.button), .hero.is-black #main-title h2 a:not(.button), #main-title .hero.is-black h2 a:not(.button), .is-black#main-title h2 a:not(.button),
+      .hero.is-black .subtitle a:not(.button), .is-black#main-title .subtitle a:not(.button), .hero.is-black h2 a:not(.button), .hero.is-black h3 a:not(.button), .is-black#main-title h3 a:not(.button), .hero.is-black h4 a:not(.button), .is-black#main-title h4 a:not(.button), .hero.is-black h5 a:not(.button), .is-black#main-title h5 a:not(.button), .hero.is-black #main-title h2 a:not(.button), #main-title .hero.is-black h2 a:not(.button), .is-black#main-title h2 a:not(.button),
       .hero.is-black .subtitle strong,
       .is-black#main-title .subtitle strong,
+      .hero.is-black h2 strong,
+      .hero.is-black h3 strong,
+      .is-black#main-title h3 strong,
+      .hero.is-black h4 strong,
+      .is-black#main-title h4 strong,
+      .hero.is-black h5 strong,
+      .is-black#main-title h5 strong,
       .hero.is-black #main-title h2 strong,
       #main-title .hero.is-black h2 strong,
       .is-black#main-title h2 strong {
@@ -7829,13 +7880,20 @@ label.panel-block {
     .hero.is-light strong,
     .is-light#main-title strong {
       color: inherit; }
-    .hero.is-light .title, .is-light#main-title .title, .hero.is-light #main-title h1, #main-title .hero.is-light h1, .is-light#main-title h1 {
+    .hero.is-light .title, .is-light#main-title .title, .hero.is-light h1, .hero.is-light #main-title h1, #main-title .hero.is-light h1, .is-light#main-title h1 {
       color: rgba(0, 0, 0, 0.7); }
-    .hero.is-light .subtitle, .is-light#main-title .subtitle, .hero.is-light #main-title h2, #main-title .hero.is-light h2, .is-light#main-title h2 {
+    .hero.is-light .subtitle, .is-light#main-title .subtitle, .hero.is-light h2, .hero.is-light h3, .is-light#main-title h3, .hero.is-light h4, .is-light#main-title h4, .hero.is-light h5, .is-light#main-title h5, .hero.is-light #main-title h2, #main-title .hero.is-light h2, .is-light#main-title h2 {
       color: rgba(0, 0, 0, 0.9); }
-      .hero.is-light .subtitle a:not(.button), .is-light#main-title .subtitle a:not(.button), .hero.is-light #main-title h2 a:not(.button), #main-title .hero.is-light h2 a:not(.button), .is-light#main-title h2 a:not(.button),
+      .hero.is-light .subtitle a:not(.button), .is-light#main-title .subtitle a:not(.button), .hero.is-light h2 a:not(.button), .hero.is-light h3 a:not(.button), .is-light#main-title h3 a:not(.button), .hero.is-light h4 a:not(.button), .is-light#main-title h4 a:not(.button), .hero.is-light h5 a:not(.button), .is-light#main-title h5 a:not(.button), .hero.is-light #main-title h2 a:not(.button), #main-title .hero.is-light h2 a:not(.button), .is-light#main-title h2 a:not(.button),
       .hero.is-light .subtitle strong,
       .is-light#main-title .subtitle strong,
+      .hero.is-light h2 strong,
+      .hero.is-light h3 strong,
+      .is-light#main-title h3 strong,
+      .hero.is-light h4 strong,
+      .is-light#main-title h4 strong,
+      .hero.is-light h5 strong,
+      .is-light#main-title h5 strong,
       .hero.is-light #main-title h2 strong,
       #main-title .hero.is-light h2 strong,
       .is-light#main-title h2 strong {
@@ -7881,13 +7939,20 @@ label.panel-block {
     .hero.is-dark strong,
     .is-dark#main-title strong {
       color: inherit; }
-    .hero.is-dark .title, .is-dark#main-title .title, .hero.is-dark #main-title h1, #main-title .hero.is-dark h1, .is-dark#main-title h1 {
+    .hero.is-dark .title, .is-dark#main-title .title, .hero.is-dark h1, .hero.is-dark #main-title h1, #main-title .hero.is-dark h1, .is-dark#main-title h1 {
       color: #fff; }
-    .hero.is-dark .subtitle, .is-dark#main-title .subtitle, .hero.is-dark #main-title h2, #main-title .hero.is-dark h2, .is-dark#main-title h2 {
+    .hero.is-dark .subtitle, .is-dark#main-title .subtitle, .hero.is-dark h2, .hero.is-dark h3, .is-dark#main-title h3, .hero.is-dark h4, .is-dark#main-title h4, .hero.is-dark h5, .is-dark#main-title h5, .hero.is-dark #main-title h2, #main-title .hero.is-dark h2, .is-dark#main-title h2 {
       color: rgba(255, 255, 255, 0.9); }
-      .hero.is-dark .subtitle a:not(.button), .is-dark#main-title .subtitle a:not(.button), .hero.is-dark #main-title h2 a:not(.button), #main-title .hero.is-dark h2 a:not(.button), .is-dark#main-title h2 a:not(.button),
+      .hero.is-dark .subtitle a:not(.button), .is-dark#main-title .subtitle a:not(.button), .hero.is-dark h2 a:not(.button), .hero.is-dark h3 a:not(.button), .is-dark#main-title h3 a:not(.button), .hero.is-dark h4 a:not(.button), .is-dark#main-title h4 a:not(.button), .hero.is-dark h5 a:not(.button), .is-dark#main-title h5 a:not(.button), .hero.is-dark #main-title h2 a:not(.button), #main-title .hero.is-dark h2 a:not(.button), .is-dark#main-title h2 a:not(.button),
       .hero.is-dark .subtitle strong,
       .is-dark#main-title .subtitle strong,
+      .hero.is-dark h2 strong,
+      .hero.is-dark h3 strong,
+      .is-dark#main-title h3 strong,
+      .hero.is-dark h4 strong,
+      .is-dark#main-title h4 strong,
+      .hero.is-dark h5 strong,
+      .is-dark#main-title h5 strong,
       .hero.is-dark #main-title h2 strong,
       #main-title .hero.is-dark h2 strong,
       .is-dark#main-title h2 strong {
@@ -7935,15 +8000,28 @@ label.panel-block {
     #main-title > div#main-title strong,
     #main-title > div.hero strong {
       color: inherit; }
-    .hero.is-primary .title, .is-primary#main-title .title, #main-title > div#main-title .title, #main-title > div.hero .title, .hero.is-primary #main-title h1, #main-title .hero.is-primary h1, .is-primary#main-title h1, #main-title > div#main-title h1, #main-title > div.hero h1 {
+    .hero.is-primary .title, .is-primary#main-title .title, #main-title > div#main-title .title, #main-title > div.hero .title, .hero.is-primary h1, .hero.is-primary #main-title h1, #main-title .hero.is-primary h1, .is-primary#main-title h1, #main-title > div#main-title h1, #main-title > div.hero h1 {
       color: #fff; }
-    .hero.is-primary .subtitle, .is-primary#main-title .subtitle, #main-title > div#main-title .subtitle, #main-title > div.hero .subtitle, .hero.is-primary #main-title h2, #main-title .hero.is-primary h2, .is-primary#main-title h2, #main-title > div#main-title h2, #main-title > div.hero h2 {
+    .hero.is-primary .subtitle, .is-primary#main-title .subtitle, #main-title > div#main-title .subtitle, #main-title > div.hero .subtitle, .hero.is-primary h2, .hero.is-primary h3, .is-primary#main-title h3, #main-title > div#main-title h3, #main-title > div.hero h3, .hero.is-primary h4, .is-primary#main-title h4, #main-title > div#main-title h4, #main-title > div.hero h4, .hero.is-primary h5, .is-primary#main-title h5, #main-title > div#main-title h5, #main-title > div.hero h5, .hero.is-primary #main-title h2, #main-title .hero.is-primary h2, .is-primary#main-title h2, #main-title > div#main-title h2, #main-title > div.hero h2 {
       color: rgba(255, 255, 255, 0.9); }
-      .hero.is-primary .subtitle a:not(.button), .is-primary#main-title .subtitle a:not(.button), #main-title > div#main-title .subtitle a:not(.button), #main-title > div.hero .subtitle a:not(.button), .hero.is-primary #main-title h2 a:not(.button), #main-title .hero.is-primary h2 a:not(.button), .is-primary#main-title h2 a:not(.button), #main-title > div#main-title h2 a:not(.button), #main-title > div.hero h2 a:not(.button),
+      .hero.is-primary .subtitle a:not(.button), .is-primary#main-title .subtitle a:not(.button), #main-title > div#main-title .subtitle a:not(.button), #main-title > div.hero .subtitle a:not(.button), .hero.is-primary h2 a:not(.button), .hero.is-primary h3 a:not(.button), .is-primary#main-title h3 a:not(.button), #main-title > div#main-title h3 a:not(.button), #main-title > div.hero h3 a:not(.button), .hero.is-primary h4 a:not(.button), .is-primary#main-title h4 a:not(.button), #main-title > div#main-title h4 a:not(.button), #main-title > div.hero h4 a:not(.button), .hero.is-primary h5 a:not(.button), .is-primary#main-title h5 a:not(.button), #main-title > div#main-title h5 a:not(.button), #main-title > div.hero h5 a:not(.button), .hero.is-primary #main-title h2 a:not(.button), #main-title .hero.is-primary h2 a:not(.button), .is-primary#main-title h2 a:not(.button), #main-title > div#main-title h2 a:not(.button), #main-title > div.hero h2 a:not(.button),
       .hero.is-primary .subtitle strong,
       .is-primary#main-title .subtitle strong,
       #main-title > div#main-title .subtitle strong,
       #main-title > div.hero .subtitle strong,
+      .hero.is-primary h2 strong,
+      .hero.is-primary h3 strong,
+      .is-primary#main-title h3 strong,
+      #main-title > div#main-title h3 strong,
+      #main-title > div.hero h3 strong,
+      .hero.is-primary h4 strong,
+      .is-primary#main-title h4 strong,
+      #main-title > div#main-title h4 strong,
+      #main-title > div.hero h4 strong,
+      .hero.is-primary h5 strong,
+      .is-primary#main-title h5 strong,
+      #main-title > div#main-title h5 strong,
+      #main-title > div.hero h5 strong,
       .hero.is-primary #main-title h2 strong,
       #main-title .hero.is-primary h2 strong,
       .is-primary#main-title h2 strong,
@@ -7997,13 +8075,20 @@ label.panel-block {
     .hero.is-link strong,
     .is-link#main-title strong {
       color: inherit; }
-    .hero.is-link .title, .is-link#main-title .title, .hero.is-link #main-title h1, #main-title .hero.is-link h1, .is-link#main-title h1 {
+    .hero.is-link .title, .is-link#main-title .title, .hero.is-link h1, .hero.is-link #main-title h1, #main-title .hero.is-link h1, .is-link#main-title h1 {
       color: #fff; }
-    .hero.is-link .subtitle, .is-link#main-title .subtitle, .hero.is-link #main-title h2, #main-title .hero.is-link h2, .is-link#main-title h2 {
+    .hero.is-link .subtitle, .is-link#main-title .subtitle, .hero.is-link h2, .hero.is-link h3, .is-link#main-title h3, .hero.is-link h4, .is-link#main-title h4, .hero.is-link h5, .is-link#main-title h5, .hero.is-link #main-title h2, #main-title .hero.is-link h2, .is-link#main-title h2 {
       color: rgba(255, 255, 255, 0.9); }
-      .hero.is-link .subtitle a:not(.button), .is-link#main-title .subtitle a:not(.button), .hero.is-link #main-title h2 a:not(.button), #main-title .hero.is-link h2 a:not(.button), .is-link#main-title h2 a:not(.button),
+      .hero.is-link .subtitle a:not(.button), .is-link#main-title .subtitle a:not(.button), .hero.is-link h2 a:not(.button), .hero.is-link h3 a:not(.button), .is-link#main-title h3 a:not(.button), .hero.is-link h4 a:not(.button), .is-link#main-title h4 a:not(.button), .hero.is-link h5 a:not(.button), .is-link#main-title h5 a:not(.button), .hero.is-link #main-title h2 a:not(.button), #main-title .hero.is-link h2 a:not(.button), .is-link#main-title h2 a:not(.button),
       .hero.is-link .subtitle strong,
       .is-link#main-title .subtitle strong,
+      .hero.is-link h2 strong,
+      .hero.is-link h3 strong,
+      .is-link#main-title h3 strong,
+      .hero.is-link h4 strong,
+      .is-link#main-title h4 strong,
+      .hero.is-link h5 strong,
+      .is-link#main-title h5 strong,
       .hero.is-link #main-title h2 strong,
       #main-title .hero.is-link h2 strong,
       .is-link#main-title h2 strong {
@@ -8049,13 +8134,20 @@ label.panel-block {
     .hero.is-info strong,
     .is-info#main-title strong {
       color: inherit; }
-    .hero.is-info .title, .is-info#main-title .title, .hero.is-info #main-title h1, #main-title .hero.is-info h1, .is-info#main-title h1 {
+    .hero.is-info .title, .is-info#main-title .title, .hero.is-info h1, .hero.is-info #main-title h1, #main-title .hero.is-info h1, .is-info#main-title h1 {
       color: #fff; }
-    .hero.is-info .subtitle, .is-info#main-title .subtitle, .hero.is-info #main-title h2, #main-title .hero.is-info h2, .is-info#main-title h2 {
+    .hero.is-info .subtitle, .is-info#main-title .subtitle, .hero.is-info h2, .hero.is-info h3, .is-info#main-title h3, .hero.is-info h4, .is-info#main-title h4, .hero.is-info h5, .is-info#main-title h5, .hero.is-info #main-title h2, #main-title .hero.is-info h2, .is-info#main-title h2 {
       color: rgba(255, 255, 255, 0.9); }
-      .hero.is-info .subtitle a:not(.button), .is-info#main-title .subtitle a:not(.button), .hero.is-info #main-title h2 a:not(.button), #main-title .hero.is-info h2 a:not(.button), .is-info#main-title h2 a:not(.button),
+      .hero.is-info .subtitle a:not(.button), .is-info#main-title .subtitle a:not(.button), .hero.is-info h2 a:not(.button), .hero.is-info h3 a:not(.button), .is-info#main-title h3 a:not(.button), .hero.is-info h4 a:not(.button), .is-info#main-title h4 a:not(.button), .hero.is-info h5 a:not(.button), .is-info#main-title h5 a:not(.button), .hero.is-info #main-title h2 a:not(.button), #main-title .hero.is-info h2 a:not(.button), .is-info#main-title h2 a:not(.button),
       .hero.is-info .subtitle strong,
       .is-info#main-title .subtitle strong,
+      .hero.is-info h2 strong,
+      .hero.is-info h3 strong,
+      .is-info#main-title h3 strong,
+      .hero.is-info h4 strong,
+      .is-info#main-title h4 strong,
+      .hero.is-info h5 strong,
+      .is-info#main-title h5 strong,
       .hero.is-info #main-title h2 strong,
       #main-title .hero.is-info h2 strong,
       .is-info#main-title h2 strong {
@@ -8101,13 +8193,20 @@ label.panel-block {
     .hero.is-success strong,
     .is-success#main-title strong {
       color: inherit; }
-    .hero.is-success .title, .is-success#main-title .title, .hero.is-success #main-title h1, #main-title .hero.is-success h1, .is-success#main-title h1 {
+    .hero.is-success .title, .is-success#main-title .title, .hero.is-success h1, .hero.is-success #main-title h1, #main-title .hero.is-success h1, .is-success#main-title h1 {
       color: #fff; }
-    .hero.is-success .subtitle, .is-success#main-title .subtitle, .hero.is-success #main-title h2, #main-title .hero.is-success h2, .is-success#main-title h2 {
+    .hero.is-success .subtitle, .is-success#main-title .subtitle, .hero.is-success h2, .hero.is-success h3, .is-success#main-title h3, .hero.is-success h4, .is-success#main-title h4, .hero.is-success h5, .is-success#main-title h5, .hero.is-success #main-title h2, #main-title .hero.is-success h2, .is-success#main-title h2 {
       color: rgba(255, 255, 255, 0.9); }
-      .hero.is-success .subtitle a:not(.button), .is-success#main-title .subtitle a:not(.button), .hero.is-success #main-title h2 a:not(.button), #main-title .hero.is-success h2 a:not(.button), .is-success#main-title h2 a:not(.button),
+      .hero.is-success .subtitle a:not(.button), .is-success#main-title .subtitle a:not(.button), .hero.is-success h2 a:not(.button), .hero.is-success h3 a:not(.button), .is-success#main-title h3 a:not(.button), .hero.is-success h4 a:not(.button), .is-success#main-title h4 a:not(.button), .hero.is-success h5 a:not(.button), .is-success#main-title h5 a:not(.button), .hero.is-success #main-title h2 a:not(.button), #main-title .hero.is-success h2 a:not(.button), .is-success#main-title h2 a:not(.button),
       .hero.is-success .subtitle strong,
       .is-success#main-title .subtitle strong,
+      .hero.is-success h2 strong,
+      .hero.is-success h3 strong,
+      .is-success#main-title h3 strong,
+      .hero.is-success h4 strong,
+      .is-success#main-title h4 strong,
+      .hero.is-success h5 strong,
+      .is-success#main-title h5 strong,
       .hero.is-success #main-title h2 strong,
       #main-title .hero.is-success h2 strong,
       .is-success#main-title h2 strong {
@@ -8153,13 +8252,20 @@ label.panel-block {
     .hero.is-warning strong,
     .is-warning#main-title strong {
       color: inherit; }
-    .hero.is-warning .title, .is-warning#main-title .title, .hero.is-warning #main-title h1, #main-title .hero.is-warning h1, .is-warning#main-title h1 {
+    .hero.is-warning .title, .is-warning#main-title .title, .hero.is-warning h1, .hero.is-warning #main-title h1, #main-title .hero.is-warning h1, .is-warning#main-title h1 {
       color: rgba(0, 0, 0, 0.7); }
-    .hero.is-warning .subtitle, .is-warning#main-title .subtitle, .hero.is-warning #main-title h2, #main-title .hero.is-warning h2, .is-warning#main-title h2 {
+    .hero.is-warning .subtitle, .is-warning#main-title .subtitle, .hero.is-warning h2, .hero.is-warning h3, .is-warning#main-title h3, .hero.is-warning h4, .is-warning#main-title h4, .hero.is-warning h5, .is-warning#main-title h5, .hero.is-warning #main-title h2, #main-title .hero.is-warning h2, .is-warning#main-title h2 {
       color: rgba(0, 0, 0, 0.9); }
-      .hero.is-warning .subtitle a:not(.button), .is-warning#main-title .subtitle a:not(.button), .hero.is-warning #main-title h2 a:not(.button), #main-title .hero.is-warning h2 a:not(.button), .is-warning#main-title h2 a:not(.button),
+      .hero.is-warning .subtitle a:not(.button), .is-warning#main-title .subtitle a:not(.button), .hero.is-warning h2 a:not(.button), .hero.is-warning h3 a:not(.button), .is-warning#main-title h3 a:not(.button), .hero.is-warning h4 a:not(.button), .is-warning#main-title h4 a:not(.button), .hero.is-warning h5 a:not(.button), .is-warning#main-title h5 a:not(.button), .hero.is-warning #main-title h2 a:not(.button), #main-title .hero.is-warning h2 a:not(.button), .is-warning#main-title h2 a:not(.button),
       .hero.is-warning .subtitle strong,
       .is-warning#main-title .subtitle strong,
+      .hero.is-warning h2 strong,
+      .hero.is-warning h3 strong,
+      .is-warning#main-title h3 strong,
+      .hero.is-warning h4 strong,
+      .is-warning#main-title h4 strong,
+      .hero.is-warning h5 strong,
+      .is-warning#main-title h5 strong,
       .hero.is-warning #main-title h2 strong,
       #main-title .hero.is-warning h2 strong,
       .is-warning#main-title h2 strong {
@@ -8205,13 +8311,20 @@ label.panel-block {
     .hero.is-danger strong,
     .is-danger#main-title strong {
       color: inherit; }
-    .hero.is-danger .title, .is-danger#main-title .title, .hero.is-danger #main-title h1, #main-title .hero.is-danger h1, .is-danger#main-title h1 {
+    .hero.is-danger .title, .is-danger#main-title .title, .hero.is-danger h1, .hero.is-danger #main-title h1, #main-title .hero.is-danger h1, .is-danger#main-title h1 {
       color: #fff; }
-    .hero.is-danger .subtitle, .is-danger#main-title .subtitle, .hero.is-danger #main-title h2, #main-title .hero.is-danger h2, .is-danger#main-title h2 {
+    .hero.is-danger .subtitle, .is-danger#main-title .subtitle, .hero.is-danger h2, .hero.is-danger h3, .is-danger#main-title h3, .hero.is-danger h4, .is-danger#main-title h4, .hero.is-danger h5, .is-danger#main-title h5, .hero.is-danger #main-title h2, #main-title .hero.is-danger h2, .is-danger#main-title h2 {
       color: rgba(255, 255, 255, 0.9); }
-      .hero.is-danger .subtitle a:not(.button), .is-danger#main-title .subtitle a:not(.button), .hero.is-danger #main-title h2 a:not(.button), #main-title .hero.is-danger h2 a:not(.button), .is-danger#main-title h2 a:not(.button),
+      .hero.is-danger .subtitle a:not(.button), .is-danger#main-title .subtitle a:not(.button), .hero.is-danger h2 a:not(.button), .hero.is-danger h3 a:not(.button), .is-danger#main-title h3 a:not(.button), .hero.is-danger h4 a:not(.button), .is-danger#main-title h4 a:not(.button), .hero.is-danger h5 a:not(.button), .is-danger#main-title h5 a:not(.button), .hero.is-danger #main-title h2 a:not(.button), #main-title .hero.is-danger h2 a:not(.button), .is-danger#main-title h2 a:not(.button),
       .hero.is-danger .subtitle strong,
       .is-danger#main-title .subtitle strong,
+      .hero.is-danger h2 strong,
+      .hero.is-danger h3 strong,
+      .is-danger#main-title h3 strong,
+      .hero.is-danger h4 strong,
+      .is-danger#main-title h4 strong,
+      .hero.is-danger h5 strong,
+      .is-danger#main-title h5 strong,
       .hero.is-danger #main-title h2 strong,
       #main-title .hero.is-danger h2 strong,
       .is-danger#main-title h2 strong {

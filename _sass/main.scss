@@ -162,11 +162,15 @@ body {
 }
 
 figure { @extend .image; }
-h1 { @extend .title, .is-1, .is-size-3-mobile; }
-h2 { @extend .subtitle .is-2, .is-size-4-mobile; }
-h3 { @extend .subtitle .is-3, .is-size-5-mobile; }
-h4 { @extend .subtitle .is-4, .is-size-6-mobile; }
-h5 { @extend .subtitle .is-5, .is-size-7-mobile; }
+h1 { @extend .title,    .is-1, .is-size-3-mobile; }
+h2 { @extend .subtitle, .is-2, .is-size-4-mobile; }
+h3 { @extend .subtitle, .is-3, .is-size-5-mobile; }
+h4 { @extend .subtitle, .is-4, .is-size-6-mobile; }
+h5 { @extend .subtitle, .is-5, .is-size-7-mobile; }
+
+section > div > h1:first-child {
+    @extend .is-uppercase;
+}
 
 nav {
     @extend .navbar, .is-fixed-top;
