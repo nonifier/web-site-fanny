@@ -161,6 +161,8 @@ body {
     @extend .has-navbar-fixed-top;
 }
 
+figure { @extend .image; }
+
 nav {
     @extend .navbar, .is-fixed-top;
     >div:first-child {
