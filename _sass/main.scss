@@ -103,6 +103,7 @@ li { margin: 0.5rem auto; }
 .has-height-14rem { height: 14rem; }
 .has-height-15rem { height: 15rem; }
 
+.has-padding-0 { padding: 0; }
 .has-padding-20 { padding: 20%; }
 .has-padding-25 { padding: 25%; }
 .has-padding-30 { padding: 30%; }
@@ -151,27 +152,30 @@ li { margin: 0.5rem auto; }
 }
 
 body { @extend .has-navbar-fixed-top; }
-section { @extend .section, .is-large; }
+section:not(#main-title) { @extend .section, .is-medium; }
 footer { @extend .footer, .has-padding-2rem; }
 figure { @extend .image; }
 h1 { @extend .title,    .is-1, .is-size-3-mobile; }
 h2 { @extend .subtitle, .is-2, .is-size-4-mobile; }
 h3 { @extend .subtitle, .is-3, .is-size-5-mobile; }
-h4 { @extend .subtitle, .is-4, .is-size-6-mobile; }
-h5 { @extend .subtitle, .is-5, .is-size-7-mobile; }
+h4 { @extend .subtitle, .is-4, .is-size-4-mobile; }
+h5 { @extend .subtitle, .is-5, .is-size-5-mobile; }
 p { @extend .content; }
 
-section > div > h1:first-child {
-    @extend .is-uppercase;
+section:not(#main-title) > div:first-child {
+	@extend .container;
+	> h1:first-child {
+		@extend .is-uppercase;
+	}
 }
 
 nav {
     @extend .navbar, .is-fixed-top;
-    >div:first-child {
+    > div:first-child {
         @extend .navbar-brand;
         span { @extend .navbar-item; }
     }
-    >div:last-child {
+    > div:last-child {
         @extend .navbar-end;
         div { @extend .field, .is-grouped; }
         a { @extend .navbar-item; }
@@ -192,19 +196,10 @@ nav {
             .hero-body,
             .has-margin-auto,
             .is-primary;
-        padding: 0;
     }
-    h1, h2 {
-        @extend .has-text-white, .has-text-shadow-black;
-    }
-    h1 {
-        @extend .is-uppercase,
-    }
-    h2 {
-        @extend 
-            .is-capitalized,
-            .subtitle;
-    }
+    h1, h2 { @extend .has-text-white, .has-text-shadow-black; }
+    h1 { @extend .is-uppercase, }
+    h2 { @extend .is-capitalized, .subtitle; }
 }
 
 #en-quelques-mots {
@@ -213,12 +208,18 @@ nav {
         position: relative;
         top: 20%;
     }
-    h1 { @extend .is-uppercase; }
+    h1 { @extend .is-size-4-mobile, .is-uppercase; }
+    h2 { @extend .is-size-3-mobile; }
     img { max-width: 80%; }
     #fanny { 
         @extend .is-half-touch, .is-one-quarter-desktop;
         float: right;
     }
+	> div {
+		@extend .columns;
+		> div { @extend .column; }
+		> div:not(:first-child) { @extend .is-sticky; }
+	}
 }
 
 #professional-experiences {
@@ -237,6 +238,6 @@ nav {
 }
 
 #contacts { 
-    @extend .has-hero-img, .has-hero, .outer-hero;
+    @extend .has-hero-img, .has-hero, .outer-hero, .is-large;
 }
 
