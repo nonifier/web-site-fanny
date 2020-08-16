@@ -157,10 +157,8 @@ li { margin: 0.5rem auto; }
     clip-path: circle(80% at 100vw 70%);
 }
 
-body {
-    @extend .has-navbar-fixed-top;
-}
-
+body { @extend .has-navbar-fixed-top; }
+section { @extend .section; }
 figure { @extend .image; }
 h1 { @extend .title,    .is-1, .is-size-3-mobile; }
 h2 { @extend .subtitle, .is-2, .is-size-4-mobile; }
@@ -199,14 +197,13 @@ nav {
             .hero-body,
             .has-margin-auto,
             .is-primary;
+        padding: 0;
     }
     h1, h2 {
         @extend .has-text-white, .has-text-shadow-black;
     }
     h1 {
-        @extend 
-            .is-uppercase,
-            .title;
+        @extend .is-uppercase,
     }
     h2 {
         @extend 
@@ -216,11 +213,12 @@ nav {
 }
 
 #en-quelques-mots {
-    @extend .section, .is-medium;
+    @extend .is-medium;
     h1, p {
         position: relative;
         top: 20%;
     }
+    h1 { @extend .is-uppercase; }
     img { max-width: 80%; }
     #fanny { 
         @extend .is-half-touch, .is-one-quarter-desktop;
@@ -228,3 +226,5 @@ nav {
     }
 }
 
+#professional-experiences {
+}
