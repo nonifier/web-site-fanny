@@ -41,13 +41,6 @@ $box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.2), 0 0px 0 2px rgba(10, 10
     align-self: flex-start;
 }
  
-.competencies {
-    .is-child { text-align: center; }
-    .notification { padding: 3rem 1.5rem; }
-    figure { display: inline-block; }
-    img { max-width: 12em; }
-}
-
 .is-centered { 
     display: flex;
     justify-content: center;
@@ -158,7 +151,8 @@ li { margin: 0.5rem auto; }
 }
 
 body { @extend .has-navbar-fixed-top; }
-section { @extend .section; }
+section { @extend .section, .is-large; }
+footer { @extend .footer, .has-padding-2rem; }
 figure { @extend .image; }
 h1 { @extend .title,    .is-1, .is-size-3-mobile; }
 h2 { @extend .subtitle, .is-2, .is-size-4-mobile; }
@@ -228,4 +222,21 @@ nav {
 }
 
 #professional-experiences {
+    @extend .has-background-primary;
 }
+
+#competencies {
+    .is-child { text-align: center; }
+    .notification { padding: 3rem 1.5rem; }
+    figure { display: inline-block; }
+    img { max-width: 12em; }
+}
+
+#portfolio {
+    @extend .has-background-primary;
+}
+
+#contacts { 
+    @extend .has-hero-img, .has-hero, .outer-hero;
+}
+
