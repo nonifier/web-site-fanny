@@ -223,7 +223,24 @@ nav {
 }
 
 #professional-experiences {
-    @extend .has-background-primary;
+	@extend .has-background-primary;
+	> div {
+		h1 { @extend .has-text-white; }
+		> div {
+			@extend .columns;
+			> div { 
+				@extend .column;
+				> div {
+					@extend .box;
+					> div {
+						@extend .container, .is-centered, .has-padding-1rem;
+					}
+				}
+			}
+		}
+	}
+	h4:nth-child(2) { @extend .title; }
+	figure { @extend .is-64x64; }
 }
 
 #competencies {
