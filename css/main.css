@@ -77,8 +77,8 @@
   transform-origin: center;
   width: 0.625em; }
 
-.box:not(:last-child), #carousel-demo:not(:last-child), .content:not(:last-child), .notification:not(:last-child), .progress:not(:last-child), .table:not(:last-child), .table-container:not(:last-child), .title:not(:last-child),
-.subtitle:not(:last-child), .block:not(:last-child), .highlight:not(:last-child), .breadcrumb:not(:last-child), .level:not(:last-child), .list:not(:last-child), .message:not(:last-child), .pagination:not(:last-child), .tabs:not(:last-child) {
+.box:not(:last-child), #carousel-demo:not(:last-child), .content:not(:last-child), .notification:not(:last-child), .progress:not(:last-child), .table:not(:last-child), .table-container:not(:last-child), .title:not(:last-child), #main-title h1:not(:last-child),
+.subtitle:not(:last-child), #main-title h2:not(:last-child), .block:not(:last-child), .highlight:not(:last-child), .breadcrumb:not(:last-child), .level:not(:last-child), .list:not(:last-child), .message:not(:last-child), .pagination:not(:last-child), .tabs:not(:last-child) {
   margin-bottom: 1.5rem; }
 
 .delete, .modal-close {
@@ -455,9 +455,9 @@ table th {
     font-size: 3rem !important; }
   .is-size-2-mobile {
     font-size: 2.5rem !important; }
-  .is-size-3-mobile {
+  .is-size-3-mobile, #main-title h1 {
     font-size: 2rem !important; }
-  .is-size-4-mobile {
+  .is-size-4-mobile, #main-title h2 {
     font-size: 1.5rem !important; }
   .is-size-5-mobile {
     font-size: 1.25rem !important; }
@@ -702,19 +702,19 @@ table th {
   .has-text-right-fullhd {
     text-align: right !important; } }
 
-.is-capitalized {
+.is-capitalized, #main-title h2 {
   text-transform: capitalize !important; }
 
 .is-lowercase {
   text-transform: lowercase !important; }
 
-.is-uppercase {
+.is-uppercase, #main-title h1 {
   text-transform: uppercase !important; }
 
 .is-italic {
   font-style: italic !important; }
 
-.has-text-white {
+.has-text-white, #main-title h1, #main-title h2 {
   color: white !important; }
 
 a.has-text-white:hover, a.has-text-white:focus {
@@ -1526,82 +1526,86 @@ a.box:active, a#carousel-demo:active {
         border-color: #fff;
         box-shadow: none;
         color: #fff; }
-  .button.is-primary {
+  .button.is-primary, #main-title > div.button {
     background-color: #3bb7b4;
     border-color: transparent;
     color: #fff; }
-    .button.is-primary:hover, .button.is-primary.is-hovered {
+    .button.is-primary:hover, #main-title > div.button:hover, .button.is-primary.is-hovered, #main-title > div.button.is-hovered {
       background-color: #38adab;
       border-color: transparent;
       color: #fff; }
-    .button.is-primary:focus, .button.is-primary.is-focused {
+    .button.is-primary:focus, #main-title > div.button:focus, .button.is-primary.is-focused, #main-title > div.button.is-focused {
       border-color: transparent;
       color: #fff; }
-      .button.is-primary:focus:not(:active), .button.is-primary.is-focused:not(:active) {
+      .button.is-primary:focus:not(:active), #main-title > div.button:focus:not(:active), .button.is-primary.is-focused:not(:active), #main-title > div.button.is-focused:not(:active) {
         box-shadow: 0 0 0 0.125em rgba(59, 183, 180, 0.25); }
-    .button.is-primary:active, .button.is-primary.is-active {
+    .button.is-primary:active, #main-title > div.button:active, .button.is-primary.is-active, #main-title > div.button.is-active {
       background-color: #35a4a1;
       border-color: transparent;
       color: #fff; }
-    .button.is-primary[disabled],
-    fieldset[disabled] .button.is-primary {
+    .button.is-primary[disabled], #main-title > div.button[disabled],
+    fieldset[disabled] .button.is-primary,
+    fieldset[disabled] #main-title > div.button {
       background-color: #3bb7b4;
       border-color: transparent;
       box-shadow: none; }
-    .button.is-primary.is-inverted {
+    .button.is-primary.is-inverted, #main-title > div.button.is-inverted {
       background-color: #fff;
       color: #3bb7b4; }
-      .button.is-primary.is-inverted:hover, .button.is-primary.is-inverted.is-hovered {
+      .button.is-primary.is-inverted:hover, #main-title > div.button.is-inverted:hover, .button.is-primary.is-inverted.is-hovered, #main-title > div.button.is-inverted.is-hovered {
         background-color: #f2f2f2; }
-      .button.is-primary.is-inverted[disabled],
-      fieldset[disabled] .button.is-primary.is-inverted {
+      .button.is-primary.is-inverted[disabled], #main-title > div.button.is-inverted[disabled],
+      fieldset[disabled] .button.is-primary.is-inverted,
+      fieldset[disabled] #main-title > div.button.is-inverted {
         background-color: #fff;
         border-color: transparent;
         box-shadow: none;
         color: #3bb7b4; }
-    .button.is-primary.is-loading::after {
+    .button.is-primary.is-loading::after, #main-title > div.button.is-loading::after {
       border-color: transparent transparent #fff #fff !important; }
-    .button.is-primary.is-outlined {
+    .button.is-primary.is-outlined, #main-title > div.button.is-outlined {
       background-color: transparent;
       border-color: #3bb7b4;
       color: #3bb7b4; }
-      .button.is-primary.is-outlined:hover, .button.is-primary.is-outlined.is-hovered, .button.is-primary.is-outlined:focus, .button.is-primary.is-outlined.is-focused {
+      .button.is-primary.is-outlined:hover, #main-title > div.button.is-outlined:hover, .button.is-primary.is-outlined.is-hovered, #main-title > div.button.is-outlined.is-hovered, .button.is-primary.is-outlined:focus, #main-title > div.button.is-outlined:focus, .button.is-primary.is-outlined.is-focused, #main-title > div.button.is-outlined.is-focused {
         background-color: #3bb7b4;
         border-color: #3bb7b4;
         color: #fff; }
-      .button.is-primary.is-outlined.is-loading::after {
+      .button.is-primary.is-outlined.is-loading::after, #main-title > div.button.is-outlined.is-loading::after {
         border-color: transparent transparent #3bb7b4 #3bb7b4 !important; }
-      .button.is-primary.is-outlined.is-loading:hover::after, .button.is-primary.is-outlined.is-loading.is-hovered::after, .button.is-primary.is-outlined.is-loading:focus::after, .button.is-primary.is-outlined.is-loading.is-focused::after {
+      .button.is-primary.is-outlined.is-loading:hover::after, #main-title > div.button.is-outlined.is-loading:hover::after, .button.is-primary.is-outlined.is-loading.is-hovered::after, #main-title > div.button.is-outlined.is-loading.is-hovered::after, .button.is-primary.is-outlined.is-loading:focus::after, #main-title > div.button.is-outlined.is-loading:focus::after, .button.is-primary.is-outlined.is-loading.is-focused::after, #main-title > div.button.is-outlined.is-loading.is-focused::after {
         border-color: transparent transparent #fff #fff !important; }
-      .button.is-primary.is-outlined[disabled],
-      fieldset[disabled] .button.is-primary.is-outlined {
+      .button.is-primary.is-outlined[disabled], #main-title > div.button.is-outlined[disabled],
+      fieldset[disabled] .button.is-primary.is-outlined,
+      fieldset[disabled] #main-title > div.button.is-outlined {
         background-color: transparent;
         border-color: #3bb7b4;
         box-shadow: none;
         color: #3bb7b4; }
-    .button.is-primary.is-inverted.is-outlined {
+    .button.is-primary.is-inverted.is-outlined, #main-title > div.button.is-inverted.is-outlined {
       background-color: transparent;
       border-color: #fff;
       color: #fff; }
-      .button.is-primary.is-inverted.is-outlined:hover, .button.is-primary.is-inverted.is-outlined.is-hovered, .button.is-primary.is-inverted.is-outlined:focus, .button.is-primary.is-inverted.is-outlined.is-focused {
+      .button.is-primary.is-inverted.is-outlined:hover, #main-title > div.button.is-inverted.is-outlined:hover, .button.is-primary.is-inverted.is-outlined.is-hovered, #main-title > div.button.is-inverted.is-outlined.is-hovered, .button.is-primary.is-inverted.is-outlined:focus, #main-title > div.button.is-inverted.is-outlined:focus, .button.is-primary.is-inverted.is-outlined.is-focused, #main-title > div.button.is-inverted.is-outlined.is-focused {
         background-color: #fff;
         color: #3bb7b4; }
-      .button.is-primary.is-inverted.is-outlined.is-loading:hover::after, .button.is-primary.is-inverted.is-outlined.is-loading.is-hovered::after, .button.is-primary.is-inverted.is-outlined.is-loading:focus::after, .button.is-primary.is-inverted.is-outlined.is-loading.is-focused::after {
+      .button.is-primary.is-inverted.is-outlined.is-loading:hover::after, #main-title > div.button.is-inverted.is-outlined.is-loading:hover::after, .button.is-primary.is-inverted.is-outlined.is-loading.is-hovered::after, #main-title > div.button.is-inverted.is-outlined.is-loading.is-hovered::after, .button.is-primary.is-inverted.is-outlined.is-loading:focus::after, #main-title > div.button.is-inverted.is-outlined.is-loading:focus::after, .button.is-primary.is-inverted.is-outlined.is-loading.is-focused::after, #main-title > div.button.is-inverted.is-outlined.is-loading.is-focused::after {
         border-color: transparent transparent #3bb7b4 #3bb7b4 !important; }
-      .button.is-primary.is-inverted.is-outlined[disabled],
-      fieldset[disabled] .button.is-primary.is-inverted.is-outlined {
+      .button.is-primary.is-inverted.is-outlined[disabled], #main-title > div.button.is-inverted.is-outlined[disabled],
+      fieldset[disabled] .button.is-primary.is-inverted.is-outlined,
+      fieldset[disabled] #main-title > div.button.is-inverted.is-outlined {
         background-color: transparent;
         border-color: #fff;
         box-shadow: none;
         color: #fff; }
-    .button.is-primary.is-light {
+    .button.is-primary.is-light, #main-title > div.button.is-light {
       background-color: #81d7d4;
       color: #2a8381; }
-      .button.is-primary.is-light:hover, .button.is-primary.is-light.is-hovered {
+      .button.is-primary.is-light:hover, #main-title > div.button.is-light:hover, .button.is-primary.is-light.is-hovered, #main-title > div.button.is-light.is-hovered {
         background-color: #78d3d1;
         border-color: transparent;
         color: #2a8381; }
-      .button.is-primary.is-light:active, .button.is-primary.is-light.is-active {
+      .button.is-primary.is-light:active, #main-title > div.button.is-light:active, .button.is-primary.is-light.is-active, #main-title > div.button.is-light.is-active {
         background-color: #6ed0ce;
         border-color: transparent;
         color: #2a8381; }
@@ -2374,8 +2378,10 @@ a.box:active, a#carousel-demo:active {
     position: absolute;
     right: 0.5rem;
     top: 0.5rem; }
-  .notification .title,
+  .notification .title, .notification #main-title h1, #main-title .notification h1,
   .notification .subtitle,
+  .notification #main-title h2,
+  #main-title .notification h2,
   .notification .content {
     color: currentColor; }
   .notification.is-white {
@@ -2390,10 +2396,10 @@ a.box:active, a#carousel-demo:active {
   .notification.is-dark {
     background-color: #363636;
     color: #fff; }
-  .notification.is-primary {
+  .notification.is-primary, #main-title > div.notification {
     background-color: #3bb7b4;
     color: #fff; }
-    .notification.is-primary.is-light {
+    .notification.is-primary.is-light, #main-title > div.notification.is-light {
       background-color: #81d7d4;
       color: #2a8381; }
   .notification.is-link {
@@ -2478,13 +2484,13 @@ a.box:active, a#carousel-demo:active {
     background-color: #363636; }
   .progress.is-dark:indeterminate {
     background-image: linear-gradient(to right, #363636 30%, #ededed 30%); }
-  .progress.is-primary::-webkit-progress-value {
+  .progress.is-primary::-webkit-progress-value, #main-title > div.progress::-webkit-progress-value {
     background-color: #3bb7b4; }
-  .progress.is-primary::-moz-progress-bar {
+  .progress.is-primary::-moz-progress-bar, #main-title > div.progress::-moz-progress-bar {
     background-color: #3bb7b4; }
-  .progress.is-primary::-ms-fill {
+  .progress.is-primary::-ms-fill, #main-title > div.progress::-ms-fill {
     background-color: #3bb7b4; }
-  .progress.is-primary:indeterminate {
+  .progress.is-primary:indeterminate, #main-title > div.progress:indeterminate {
     background-image: linear-gradient(to right, #3bb7b4 30%, #ededed 30%); }
   .progress.is-link::-webkit-progress-value {
     background-color: #1a6b68; }
@@ -2748,10 +2754,10 @@ a.box:active, a#carousel-demo:active {
   .tag:not(body).is-dark {
     background-color: #363636;
     color: #fff; }
-  .tag:not(body).is-primary {
+  .tag:not(body).is-primary, #main-title > div.tag:not(body) {
     background-color: #3bb7b4;
     color: #fff; }
-    .tag:not(body).is-primary.is-light {
+    .tag:not(body).is-primary.is-light, #main-title > div.tag:not(body).is-light {
       background-color: #81d7d4;
       color: #2a8381; }
   .tag:not(body).is-link {
@@ -2829,74 +2835,83 @@ a.box:active, a#carousel-demo:active {
 a.tag:hover {
   text-decoration: underline; }
 
-.title,
-.subtitle {
+.title, #main-title h1,
+.subtitle,
+#main-title h2 {
   word-break: break-word; }
-  .title em,
+  .title em, #main-title h1 em,
   .title span,
+  #main-title h1 span,
   .subtitle em,
-  .subtitle span {
+  #main-title h2 em,
+  .subtitle span,
+  #main-title h2 span {
     font-weight: inherit; }
-  .title sub,
-  .subtitle sub {
+  .title sub, #main-title h1 sub,
+  .subtitle sub,
+  #main-title h2 sub {
     font-size: 0.75em; }
-  .title sup,
-  .subtitle sup {
+  .title sup, #main-title h1 sup,
+  .subtitle sup,
+  #main-title h2 sup {
     font-size: 0.75em; }
-  .title .tag,
-  .subtitle .tag {
+  .title .tag, #main-title h1 .tag,
+  .subtitle .tag,
+  #main-title h2 .tag {
     vertical-align: middle; }
 
-.title {
+.title, #main-title h1 {
   color: #363636;
   font-size: 2rem;
   font-weight: 600;
   line-height: 1.125; }
-  .title strong {
+  .title strong, #main-title h1 strong {
     color: inherit;
     font-weight: inherit; }
-  .title + .highlight {
+  .title + .highlight, #main-title h1 + .highlight {
     margin-top: -0.75rem; }
-  .title:not(.is-spaced) + .subtitle {
+  .title:not(.is-spaced) + .subtitle, #main-title h1:not(.is-spaced) + .subtitle, #main-title .title:not(.is-spaced) + h2, #main-title h1:not(.is-spaced) + h2 {
     margin-top: -1.25rem; }
-  .title.is-1 {
+  .title.is-1, #main-title h1 {
     font-size: 3rem; }
-  .title.is-2 {
+  .title.is-2, #main-title h1.is-2, #main-title h2.title {
     font-size: 2.5rem; }
-  .title.is-3 {
+  .title.is-3, #main-title h1.is-3 {
     font-size: 2rem; }
-  .title.is-4 {
+  .title.is-4, #main-title h1.is-4 {
     font-size: 1.5rem; }
-  .title.is-5 {
+  .title.is-5, #main-title h1.is-5 {
     font-size: 1.25rem; }
-  .title.is-6 {
+  .title.is-6, #main-title h1.is-6 {
     font-size: 1rem; }
-  .title.is-7 {
+  .title.is-7, #main-title h1.is-7 {
     font-size: 0.75rem; }
 
-.subtitle {
+
+.subtitle,
+#main-title h2 {
   color: #4a4a4a;
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.25; }
-  .subtitle strong {
+  .subtitle strong, #main-title h2 strong {
     color: #363636;
     font-weight: 600; }
-  .subtitle:not(.is-spaced) + .title {
+  .subtitle:not(.is-spaced) + .title, #main-title h2:not(.is-spaced) + .title, #main-title .subtitle:not(.is-spaced) + h1, #main-title h2:not(.is-spaced) + h1 {
     margin-top: -1.25rem; }
-  .subtitle.is-1 {
+  .subtitle.is-1, #main-title h1.subtitle, #main-title h2.is-1 {
     font-size: 3rem; }
-  .subtitle.is-2 {
+  .subtitle.is-2, #main-title h2 {
     font-size: 2.5rem; }
-  .subtitle.is-3 {
+  .subtitle.is-3, #main-title h2.is-3 {
     font-size: 2rem; }
-  .subtitle.is-4 {
+  .subtitle.is-4, #main-title h2.is-4 {
     font-size: 1.5rem; }
-  .subtitle.is-5 {
+  .subtitle.is-5, #main-title h2.is-5 {
     font-size: 1.25rem; }
-  .subtitle.is-6 {
+  .subtitle.is-6, #main-title h2.is-6 {
     font-size: 1rem; }
-  .subtitle.is-7 {
+  .subtitle.is-7, #main-title h2.is-7 {
     font-size: 0.75rem; }
 
 .heading {
@@ -3003,9 +3018,9 @@ a.tag:hover {
     border-color: #363636; }
     .is-dark.input:focus, .is-dark.textarea:focus, .is-dark.is-focused.input, .is-dark.is-focused.textarea, .is-dark.input:active, .is-dark.textarea:active, .is-dark.is-active.input, .is-dark.is-active.textarea {
       box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25); }
-  .is-primary.input, .is-primary.textarea {
+  .is-primary.input, #main-title > div.input, .is-primary.textarea, #main-title > div.textarea {
     border-color: #3bb7b4; }
-    .is-primary.input:focus, .is-primary.textarea:focus, .is-primary.is-focused.input, .is-primary.is-focused.textarea, .is-primary.input:active, .is-primary.textarea:active, .is-primary.is-active.input, .is-primary.is-active.textarea {
+    .is-primary.input:focus, #main-title > div.input:focus, .is-primary.textarea:focus, #main-title > div.textarea:focus, .is-primary.is-focused.input, #main-title > div.is-focused.input, .is-primary.is-focused.textarea, #main-title > div.is-focused.textarea, .is-primary.input:active, #main-title > div.input:active, .is-primary.textarea:active, #main-title > div.textarea:active, .is-primary.is-active.input, #main-title > div.is-active.input, .is-primary.is-active.textarea, #main-title > div.is-active.textarea {
       box-shadow: 0 0 0 0.125em rgba(59, 183, 180, 0.25); }
   .is-link.input, .is-link.textarea {
     border-color: #1a6b68; }
@@ -3151,13 +3166,13 @@ a.tag:hover {
       border-color: #292929; }
     .select.is-dark select:focus, .select.is-dark select.is-focused, .select.is-dark select:active, .select.is-dark select.is-active {
       box-shadow: 0 0 0 0.125em rgba(54, 54, 54, 0.25); }
-  .select.is-primary:not(:hover)::after {
+  .select.is-primary:not(:hover)::after, #main-title > div.select:not(:hover)::after {
     border-color: #3bb7b4; }
-  .select.is-primary select {
+  .select.is-primary select, #main-title > div.select select {
     border-color: #3bb7b4; }
-    .select.is-primary select:hover, .select.is-primary select.is-hovered {
+    .select.is-primary select:hover, #main-title > div.select select:hover, .select.is-primary select.is-hovered, #main-title > div.select select.is-hovered {
       border-color: #35a4a1; }
-    .select.is-primary select:focus, .select.is-primary select.is-focused, .select.is-primary select:active, .select.is-primary select.is-active {
+    .select.is-primary select:focus, #main-title > div.select select:focus, .select.is-primary select.is-focused, #main-title > div.select select.is-focused, .select.is-primary select:active, #main-title > div.select select:active, .select.is-primary select.is-active, #main-title > div.select select.is-active {
       box-shadow: 0 0 0 0.125em rgba(59, 183, 180, 0.25); }
   .select.is-link:not(:hover)::after {
     border-color: #1a6b68; }
@@ -3294,19 +3309,19 @@ a.tag:hover {
     background-color: #292929;
     border-color: transparent;
     color: #fff; }
-  .file.is-primary .file-cta {
+  .file.is-primary .file-cta, #main-title > div.file .file-cta {
     background-color: #3bb7b4;
     border-color: transparent;
     color: #fff; }
-  .file.is-primary:hover .file-cta, .file.is-primary.is-hovered .file-cta {
+  .file.is-primary:hover .file-cta, #main-title > div.file:hover .file-cta, .file.is-primary.is-hovered .file-cta, #main-title > div.file.is-hovered .file-cta {
     background-color: #38adab;
     border-color: transparent;
     color: #fff; }
-  .file.is-primary:focus .file-cta, .file.is-primary.is-focused .file-cta {
+  .file.is-primary:focus .file-cta, #main-title > div.file:focus .file-cta, .file.is-primary.is-focused .file-cta, #main-title > div.file.is-focused .file-cta {
     border-color: transparent;
     box-shadow: 0 0 0.5em rgba(59, 183, 180, 0.25);
     color: #fff; }
-  .file.is-primary:active .file-cta, .file.is-primary.is-active .file-cta {
+  .file.is-primary:active .file-cta, #main-title > div.file:active .file-cta, .file.is-primary.is-active .file-cta, #main-title > div.file.is-active .file-cta {
     background-color: #35a4a1;
     border-color: transparent;
     color: #fff; }
@@ -3536,7 +3551,7 @@ a.tag:hover {
     color: whitesmoke; }
   .help.is-dark {
     color: #363636; }
-  .help.is-primary {
+  .help.is-primary, #main-title > div.help {
     color: #3bb7b4; }
   .help.is-link {
     color: #1a6b68; }
@@ -3938,8 +3953,10 @@ button.dropdown-item {
   flex-grow: 0;
   flex-shrink: 0;
   justify-content: center; }
-  .level-item .title,
-  .level-item .subtitle {
+  .level-item .title, .level-item #main-title h1, #main-title .level-item h1,
+  .level-item .subtitle,
+  .level-item #main-title h2,
+  #main-title .level-item h2 {
     margin-bottom: 0; }
   @media screen and (max-width: 768px) {
     .level-item:not(:last-child) {
@@ -4128,12 +4145,12 @@ a.list-item {
       color: #fff; }
     .message.is-dark .message-body {
       border-color: #363636; }
-  .message.is-primary {
+  .message.is-primary, #main-title > div.message {
     background-color: #81d7d4; }
-    .message.is-primary .message-header {
+    .message.is-primary .message-header, #main-title > div.message .message-header {
       background-color: #3bb7b4;
       color: #fff; }
-    .message.is-primary .message-body {
+    .message.is-primary .message-body, #main-title > div.message .message-body {
       border-color: #3bb7b4;
       color: #2a8381; }
   .message.is-link {
@@ -4475,49 +4492,68 @@ a.list-item {
       .navbar.is-dark .navbar-dropdown a.navbar-item.is-active {
         background-color: #363636;
         color: #fff; } }
-  .navbar.is-primary {
+  .navbar.is-primary, #main-title > div.navbar {
     background-color: #3bb7b4;
     color: #fff; }
-    .navbar.is-primary .navbar-brand > .navbar-item,
-    .navbar.is-primary .navbar-brand .navbar-link {
+    .navbar.is-primary .navbar-brand > .navbar-item, #main-title > div.navbar .navbar-brand > .navbar-item,
+    .navbar.is-primary .navbar-brand .navbar-link,
+    #main-title > div.navbar .navbar-brand .navbar-link {
       color: #fff; }
-    .navbar.is-primary .navbar-brand > a.navbar-item:focus, .navbar.is-primary .navbar-brand > a.navbar-item:hover, .navbar.is-primary .navbar-brand > a.navbar-item.is-active,
+    .navbar.is-primary .navbar-brand > a.navbar-item:focus, #main-title > div.navbar .navbar-brand > a.navbar-item:focus, .navbar.is-primary .navbar-brand > a.navbar-item:hover, #main-title > div.navbar .navbar-brand > a.navbar-item:hover, .navbar.is-primary .navbar-brand > a.navbar-item.is-active, #main-title > div.navbar .navbar-brand > a.navbar-item.is-active,
     .navbar.is-primary .navbar-brand .navbar-link:focus,
+    #main-title > div.navbar .navbar-brand .navbar-link:focus,
     .navbar.is-primary .navbar-brand .navbar-link:hover,
-    .navbar.is-primary .navbar-brand .navbar-link.is-active {
+    #main-title > div.navbar .navbar-brand .navbar-link:hover,
+    .navbar.is-primary .navbar-brand .navbar-link.is-active,
+    #main-title > div.navbar .navbar-brand .navbar-link.is-active {
       background-color: #35a4a1;
       color: #fff; }
-    .navbar.is-primary .navbar-brand .navbar-link::after {
+    .navbar.is-primary .navbar-brand .navbar-link::after, #main-title > div.navbar .navbar-brand .navbar-link::after {
       border-color: #fff; }
-    .navbar.is-primary .navbar-burger {
+    .navbar.is-primary .navbar-burger, #main-title > div.navbar .navbar-burger {
       color: #fff; }
     @media screen and (min-width: 1024px) {
-      .navbar.is-primary .navbar-start > .navbar-item,
+      .navbar.is-primary .navbar-start > .navbar-item, #main-title > div.navbar .navbar-start > .navbar-item,
       .navbar.is-primary .navbar-start .navbar-link,
+      #main-title > div.navbar .navbar-start .navbar-link,
       .navbar.is-primary .navbar-end > .navbar-item,
-      .navbar.is-primary .navbar-end .navbar-link {
+      #main-title > div.navbar .navbar-end > .navbar-item,
+      .navbar.is-primary .navbar-end .navbar-link,
+      #main-title > div.navbar .navbar-end .navbar-link {
         color: #fff; }
-      .navbar.is-primary .navbar-start > a.navbar-item:focus, .navbar.is-primary .navbar-start > a.navbar-item:hover, .navbar.is-primary .navbar-start > a.navbar-item.is-active,
+      .navbar.is-primary .navbar-start > a.navbar-item:focus, #main-title > div.navbar .navbar-start > a.navbar-item:focus, .navbar.is-primary .navbar-start > a.navbar-item:hover, #main-title > div.navbar .navbar-start > a.navbar-item:hover, .navbar.is-primary .navbar-start > a.navbar-item.is-active, #main-title > div.navbar .navbar-start > a.navbar-item.is-active,
       .navbar.is-primary .navbar-start .navbar-link:focus,
+      #main-title > div.navbar .navbar-start .navbar-link:focus,
       .navbar.is-primary .navbar-start .navbar-link:hover,
+      #main-title > div.navbar .navbar-start .navbar-link:hover,
       .navbar.is-primary .navbar-start .navbar-link.is-active,
+      #main-title > div.navbar .navbar-start .navbar-link.is-active,
       .navbar.is-primary .navbar-end > a.navbar-item:focus,
+      #main-title > div.navbar .navbar-end > a.navbar-item:focus,
       .navbar.is-primary .navbar-end > a.navbar-item:hover,
+      #main-title > div.navbar .navbar-end > a.navbar-item:hover,
       .navbar.is-primary .navbar-end > a.navbar-item.is-active,
+      #main-title > div.navbar .navbar-end > a.navbar-item.is-active,
       .navbar.is-primary .navbar-end .navbar-link:focus,
+      #main-title > div.navbar .navbar-end .navbar-link:focus,
       .navbar.is-primary .navbar-end .navbar-link:hover,
-      .navbar.is-primary .navbar-end .navbar-link.is-active {
+      #main-title > div.navbar .navbar-end .navbar-link:hover,
+      .navbar.is-primary .navbar-end .navbar-link.is-active,
+      #main-title > div.navbar .navbar-end .navbar-link.is-active {
         background-color: #35a4a1;
         color: #fff; }
-      .navbar.is-primary .navbar-start .navbar-link::after,
-      .navbar.is-primary .navbar-end .navbar-link::after {
+      .navbar.is-primary .navbar-start .navbar-link::after, #main-title > div.navbar .navbar-start .navbar-link::after,
+      .navbar.is-primary .navbar-end .navbar-link::after,
+      #main-title > div.navbar .navbar-end .navbar-link::after {
         border-color: #fff; }
-      .navbar.is-primary .navbar-item.has-dropdown:focus .navbar-link,
+      .navbar.is-primary .navbar-item.has-dropdown:focus .navbar-link, #main-title > div.navbar .navbar-item.has-dropdown:focus .navbar-link,
       .navbar.is-primary .navbar-item.has-dropdown:hover .navbar-link,
-      .navbar.is-primary .navbar-item.has-dropdown.is-active .navbar-link {
+      #main-title > div.navbar .navbar-item.has-dropdown:hover .navbar-link,
+      .navbar.is-primary .navbar-item.has-dropdown.is-active .navbar-link,
+      #main-title > div.navbar .navbar-item.has-dropdown.is-active .navbar-link {
         background-color: #35a4a1;
         color: #fff; }
-      .navbar.is-primary .navbar-dropdown a.navbar-item.is-active {
+      .navbar.is-primary .navbar-dropdown a.navbar-item.is-active, #main-title > div.navbar .navbar-dropdown a.navbar-item.is-active {
         background-color: #3bb7b4;
         color: #fff; } }
   .navbar.is-link {
@@ -5076,7 +5112,7 @@ a.navbar-item,
   .navbar-item.has-dropdown:focus .navbar-link, .navbar-item.has-dropdown:hover .navbar-link, .navbar-item.has-dropdown.is-active .navbar-link {
     background-color: white; } }
 
-.hero.is-fullheight-with-navbar {
+.hero.is-fullheight-with-navbar, #main-title {
   min-height: calc(100vh - 3.25rem); }
 
 .pagination {
@@ -5232,12 +5268,12 @@ a.navbar-item,
     border-bottom-color: #363636; }
   .panel.is-dark .panel-block.is-active .panel-icon {
     color: #363636; }
-  .panel.is-primary .panel-heading {
+  .panel.is-primary .panel-heading, #main-title > div.panel .panel-heading {
     background-color: #3bb7b4;
     color: #fff; }
-  .panel.is-primary .panel-tabs a.is-active {
+  .panel.is-primary .panel-tabs a.is-active, #main-title > div.panel .panel-tabs a.is-active {
     border-bottom-color: #3bb7b4; }
-  .panel.is-primary .panel-block.is-active .panel-icon {
+  .panel.is-primary .panel-block.is-active .panel-icon, #main-title > div.panel .panel-block.is-active .panel-icon {
     color: #3bb7b4; }
   .panel.is-link .panel-heading {
     background-color: #1a6b68;
@@ -5517,12 +5553,12 @@ label.panel-block {
     width: 0%; }
   .columns.is-mobile > .column.is-offset-0 {
     margin-left: 0%; }
-  .columns.is-mobile > .column.is-1 {
+  .columns.is-mobile > .column.is-1, #main-title .columns.is-mobile > h1.column {
     flex: none;
     width: 8.33333%; }
   .columns.is-mobile > .column.is-offset-1 {
     margin-left: 8.33333%; }
-  .columns.is-mobile > .column.is-2 {
+  .columns.is-mobile > .column.is-2, #main-title .columns.is-mobile > h2.column {
     flex: none;
     width: 16.66667%; }
   .columns.is-mobile > .column.is-offset-2 {
@@ -5749,12 +5785,12 @@ label.panel-block {
       width: 0%; }
     .column.is-offset-0, .column.is-offset-0-tablet {
       margin-left: 0%; }
-    .column.is-1, .column.is-1-tablet {
+    .column.is-1, #main-title h1.column, .column.is-1-tablet {
       flex: none;
       width: 8.33333%; }
     .column.is-offset-1, .column.is-offset-1-tablet {
       margin-left: 8.33333%; }
-    .column.is-2, .column.is-2-tablet {
+    .column.is-2, #main-title h2.column, .column.is-2-tablet {
       flex: none;
       width: 16.66667%; }
     .column.is-offset-2, .column.is-offset-2-tablet {
@@ -6344,7 +6380,7 @@ label.panel-block {
   @media screen and (min-width: 1408px) {
     .columns.is-variable.is-0-fullhd {
       --columnGap: 0rem; } }
-  .columns.is-variable.is-1 {
+  .columns.is-variable.is-1, #main-title h1.columns.is-variable {
     --columnGap: 0.25rem; }
   @media screen and (max-width: 768px) {
     .columns.is-variable.is-1-mobile {
@@ -6373,7 +6409,7 @@ label.panel-block {
   @media screen and (min-width: 1408px) {
     .columns.is-variable.is-1-fullhd {
       --columnGap: 0.25rem; } }
-  .columns.is-variable.is-2 {
+  .columns.is-variable.is-2, #main-title h2.columns.is-variable {
     --columnGap: 0.5rem; }
   @media screen and (max-width: 768px) {
     .columns.is-variable.is-2-mobile {
@@ -6603,10 +6639,10 @@ label.panel-block {
   @media screen and (min-width: 769px), print {
     .tile:not(.is-child) {
       display: flex; }
-    .tile.is-1 {
+    .tile.is-1, #main-title h1.tile {
       flex: none;
       width: 8.33333%; }
-    .tile.is-2 {
+    .tile.is-2, #main-title h2.tile {
       flex: none;
       width: 16.66667%; }
     .tile.is-3 {
@@ -6640,472 +6676,564 @@ label.panel-block {
       flex: none;
       width: 100%; } }
 
-.hero {
+.hero, #main-title {
   align-items: stretch;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-  .hero .navbar {
+  .hero .navbar, #main-title .navbar {
     background: none; }
-  .hero .tabs ul {
+  .hero .tabs ul, #main-title .tabs ul {
     border-bottom: none; }
-  .hero.is-white {
+  .hero.is-white, .is-white#main-title {
     background-color: white;
     color: #0a0a0a; }
-    .hero.is-white a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
-    .hero.is-white strong {
+    .hero.is-white a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current), .is-white#main-title a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
+    .hero.is-white strong,
+    .is-white#main-title strong {
       color: inherit; }
-    .hero.is-white .title {
+    .hero.is-white .title, .is-white#main-title .title, .hero.is-white #main-title h1, #main-title .hero.is-white h1, .is-white#main-title h1 {
       color: #0a0a0a; }
-    .hero.is-white .subtitle {
+    .hero.is-white .subtitle, .is-white#main-title .subtitle, .hero.is-white #main-title h2, #main-title .hero.is-white h2, .is-white#main-title h2 {
       color: rgba(10, 10, 10, 0.9); }
-      .hero.is-white .subtitle a:not(.button),
-      .hero.is-white .subtitle strong {
+      .hero.is-white .subtitle a:not(.button), .is-white#main-title .subtitle a:not(.button), .hero.is-white #main-title h2 a:not(.button), #main-title .hero.is-white h2 a:not(.button), .is-white#main-title h2 a:not(.button),
+      .hero.is-white .subtitle strong,
+      .is-white#main-title .subtitle strong,
+      .hero.is-white #main-title h2 strong,
+      #main-title .hero.is-white h2 strong,
+      .is-white#main-title h2 strong {
         color: #0a0a0a; }
     @media screen and (max-width: 1023px) {
-      .hero.is-white .navbar-menu {
+      .hero.is-white .navbar-menu, .is-white#main-title .navbar-menu {
         background-color: white; } }
-    .hero.is-white .navbar-item,
-    .hero.is-white .navbar-link {
+    .hero.is-white .navbar-item, .is-white#main-title .navbar-item,
+    .hero.is-white .navbar-link,
+    .is-white#main-title .navbar-link {
       color: rgba(10, 10, 10, 0.7); }
-    .hero.is-white a.navbar-item:hover, .hero.is-white a.navbar-item.is-active,
+    .hero.is-white a.navbar-item:hover, .is-white#main-title a.navbar-item:hover, .hero.is-white a.navbar-item.is-active, .is-white#main-title a.navbar-item.is-active,
     .hero.is-white .navbar-link:hover,
-    .hero.is-white .navbar-link.is-active {
+    .is-white#main-title .navbar-link:hover,
+    .hero.is-white .navbar-link.is-active,
+    .is-white#main-title .navbar-link.is-active {
       background-color: #f2f2f2;
       color: #0a0a0a; }
-    .hero.is-white .tabs a {
+    .hero.is-white .tabs a, .is-white#main-title .tabs a {
       color: #0a0a0a;
       opacity: 0.9; }
-      .hero.is-white .tabs a:hover {
+      .hero.is-white .tabs a:hover, .is-white#main-title .tabs a:hover {
         opacity: 1; }
-    .hero.is-white .tabs li.is-active a {
+    .hero.is-white .tabs li.is-active a, .is-white#main-title .tabs li.is-active a {
       opacity: 1; }
-    .hero.is-white .tabs.is-boxed a, .hero.is-white .tabs.is-toggle a {
+    .hero.is-white .tabs.is-boxed a, .is-white#main-title .tabs.is-boxed a, .hero.is-white .tabs.is-toggle a, .is-white#main-title .tabs.is-toggle a {
       color: #0a0a0a; }
-      .hero.is-white .tabs.is-boxed a:hover, .hero.is-white .tabs.is-toggle a:hover {
+      .hero.is-white .tabs.is-boxed a:hover, .is-white#main-title .tabs.is-boxed a:hover, .hero.is-white .tabs.is-toggle a:hover, .is-white#main-title .tabs.is-toggle a:hover {
         background-color: rgba(10, 10, 10, 0.1); }
-    .hero.is-white .tabs.is-boxed li.is-active a, .hero.is-white .tabs.is-boxed li.is-active a:hover, .hero.is-white .tabs.is-toggle li.is-active a, .hero.is-white .tabs.is-toggle li.is-active a:hover {
+    .hero.is-white .tabs.is-boxed li.is-active a, .is-white#main-title .tabs.is-boxed li.is-active a, .hero.is-white .tabs.is-boxed li.is-active a:hover, .is-white#main-title .tabs.is-boxed li.is-active a:hover, .hero.is-white .tabs.is-toggle li.is-active a, .is-white#main-title .tabs.is-toggle li.is-active a, .hero.is-white .tabs.is-toggle li.is-active a:hover, .is-white#main-title .tabs.is-toggle li.is-active a:hover {
       background-color: #0a0a0a;
       border-color: #0a0a0a;
       color: white; }
-    .hero.is-white.is-bold {
+    .hero.is-white.is-bold, .is-white.is-bold#main-title {
       background-image: linear-gradient(141deg, #e6e6e6 0%, white 71%, white 100%); }
       @media screen and (max-width: 768px) {
-        .hero.is-white.is-bold .navbar-menu {
+        .hero.is-white.is-bold .navbar-menu, .is-white.is-bold#main-title .navbar-menu {
           background-image: linear-gradient(141deg, #e6e6e6 0%, white 71%, white 100%); } }
-  .hero.is-black {
+  .hero.is-black, .is-black#main-title {
     background-color: #0a0a0a;
     color: white; }
-    .hero.is-black a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
-    .hero.is-black strong {
+    .hero.is-black a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current), .is-black#main-title a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
+    .hero.is-black strong,
+    .is-black#main-title strong {
       color: inherit; }
-    .hero.is-black .title {
+    .hero.is-black .title, .is-black#main-title .title, .hero.is-black #main-title h1, #main-title .hero.is-black h1, .is-black#main-title h1 {
       color: white; }
-    .hero.is-black .subtitle {
+    .hero.is-black .subtitle, .is-black#main-title .subtitle, .hero.is-black #main-title h2, #main-title .hero.is-black h2, .is-black#main-title h2 {
       color: rgba(255, 255, 255, 0.9); }
-      .hero.is-black .subtitle a:not(.button),
-      .hero.is-black .subtitle strong {
+      .hero.is-black .subtitle a:not(.button), .is-black#main-title .subtitle a:not(.button), .hero.is-black #main-title h2 a:not(.button), #main-title .hero.is-black h2 a:not(.button), .is-black#main-title h2 a:not(.button),
+      .hero.is-black .subtitle strong,
+      .is-black#main-title .subtitle strong,
+      .hero.is-black #main-title h2 strong,
+      #main-title .hero.is-black h2 strong,
+      .is-black#main-title h2 strong {
         color: white; }
     @media screen and (max-width: 1023px) {
-      .hero.is-black .navbar-menu {
+      .hero.is-black .navbar-menu, .is-black#main-title .navbar-menu {
         background-color: #0a0a0a; } }
-    .hero.is-black .navbar-item,
-    .hero.is-black .navbar-link {
+    .hero.is-black .navbar-item, .is-black#main-title .navbar-item,
+    .hero.is-black .navbar-link,
+    .is-black#main-title .navbar-link {
       color: rgba(255, 255, 255, 0.7); }
-    .hero.is-black a.navbar-item:hover, .hero.is-black a.navbar-item.is-active,
+    .hero.is-black a.navbar-item:hover, .is-black#main-title a.navbar-item:hover, .hero.is-black a.navbar-item.is-active, .is-black#main-title a.navbar-item.is-active,
     .hero.is-black .navbar-link:hover,
-    .hero.is-black .navbar-link.is-active {
+    .is-black#main-title .navbar-link:hover,
+    .hero.is-black .navbar-link.is-active,
+    .is-black#main-title .navbar-link.is-active {
       background-color: black;
       color: white; }
-    .hero.is-black .tabs a {
+    .hero.is-black .tabs a, .is-black#main-title .tabs a {
       color: white;
       opacity: 0.9; }
-      .hero.is-black .tabs a:hover {
+      .hero.is-black .tabs a:hover, .is-black#main-title .tabs a:hover {
         opacity: 1; }
-    .hero.is-black .tabs li.is-active a {
+    .hero.is-black .tabs li.is-active a, .is-black#main-title .tabs li.is-active a {
       opacity: 1; }
-    .hero.is-black .tabs.is-boxed a, .hero.is-black .tabs.is-toggle a {
+    .hero.is-black .tabs.is-boxed a, .is-black#main-title .tabs.is-boxed a, .hero.is-black .tabs.is-toggle a, .is-black#main-title .tabs.is-toggle a {
       color: white; }
-      .hero.is-black .tabs.is-boxed a:hover, .hero.is-black .tabs.is-toggle a:hover {
+      .hero.is-black .tabs.is-boxed a:hover, .is-black#main-title .tabs.is-boxed a:hover, .hero.is-black .tabs.is-toggle a:hover, .is-black#main-title .tabs.is-toggle a:hover {
         background-color: rgba(10, 10, 10, 0.1); }
-    .hero.is-black .tabs.is-boxed li.is-active a, .hero.is-black .tabs.is-boxed li.is-active a:hover, .hero.is-black .tabs.is-toggle li.is-active a, .hero.is-black .tabs.is-toggle li.is-active a:hover {
+    .hero.is-black .tabs.is-boxed li.is-active a, .is-black#main-title .tabs.is-boxed li.is-active a, .hero.is-black .tabs.is-boxed li.is-active a:hover, .is-black#main-title .tabs.is-boxed li.is-active a:hover, .hero.is-black .tabs.is-toggle li.is-active a, .is-black#main-title .tabs.is-toggle li.is-active a, .hero.is-black .tabs.is-toggle li.is-active a:hover, .is-black#main-title .tabs.is-toggle li.is-active a:hover {
       background-color: white;
       border-color: white;
       color: #0a0a0a; }
-    .hero.is-black.is-bold {
+    .hero.is-black.is-bold, .is-black.is-bold#main-title {
       background-image: linear-gradient(141deg, black 0%, #0a0a0a 71%, #181616 100%); }
       @media screen and (max-width: 768px) {
-        .hero.is-black.is-bold .navbar-menu {
+        .hero.is-black.is-bold .navbar-menu, .is-black.is-bold#main-title .navbar-menu {
           background-image: linear-gradient(141deg, black 0%, #0a0a0a 71%, #181616 100%); } }
-  .hero.is-light {
+  .hero.is-light, .is-light#main-title {
     background-color: whitesmoke;
     color: rgba(0, 0, 0, 0.7); }
-    .hero.is-light a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
-    .hero.is-light strong {
+    .hero.is-light a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current), .is-light#main-title a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
+    .hero.is-light strong,
+    .is-light#main-title strong {
       color: inherit; }
-    .hero.is-light .title {
+    .hero.is-light .title, .is-light#main-title .title, .hero.is-light #main-title h1, #main-title .hero.is-light h1, .is-light#main-title h1 {
       color: rgba(0, 0, 0, 0.7); }
-    .hero.is-light .subtitle {
+    .hero.is-light .subtitle, .is-light#main-title .subtitle, .hero.is-light #main-title h2, #main-title .hero.is-light h2, .is-light#main-title h2 {
       color: rgba(0, 0, 0, 0.9); }
-      .hero.is-light .subtitle a:not(.button),
-      .hero.is-light .subtitle strong {
+      .hero.is-light .subtitle a:not(.button), .is-light#main-title .subtitle a:not(.button), .hero.is-light #main-title h2 a:not(.button), #main-title .hero.is-light h2 a:not(.button), .is-light#main-title h2 a:not(.button),
+      .hero.is-light .subtitle strong,
+      .is-light#main-title .subtitle strong,
+      .hero.is-light #main-title h2 strong,
+      #main-title .hero.is-light h2 strong,
+      .is-light#main-title h2 strong {
         color: rgba(0, 0, 0, 0.7); }
     @media screen and (max-width: 1023px) {
-      .hero.is-light .navbar-menu {
+      .hero.is-light .navbar-menu, .is-light#main-title .navbar-menu {
         background-color: whitesmoke; } }
-    .hero.is-light .navbar-item,
-    .hero.is-light .navbar-link {
+    .hero.is-light .navbar-item, .is-light#main-title .navbar-item,
+    .hero.is-light .navbar-link,
+    .is-light#main-title .navbar-link {
       color: rgba(0, 0, 0, 0.7); }
-    .hero.is-light a.navbar-item:hover, .hero.is-light a.navbar-item.is-active,
+    .hero.is-light a.navbar-item:hover, .is-light#main-title a.navbar-item:hover, .hero.is-light a.navbar-item.is-active, .is-light#main-title a.navbar-item.is-active,
     .hero.is-light .navbar-link:hover,
-    .hero.is-light .navbar-link.is-active {
+    .is-light#main-title .navbar-link:hover,
+    .hero.is-light .navbar-link.is-active,
+    .is-light#main-title .navbar-link.is-active {
       background-color: #e8e8e8;
       color: rgba(0, 0, 0, 0.7); }
-    .hero.is-light .tabs a {
+    .hero.is-light .tabs a, .is-light#main-title .tabs a {
       color: rgba(0, 0, 0, 0.7);
       opacity: 0.9; }
-      .hero.is-light .tabs a:hover {
+      .hero.is-light .tabs a:hover, .is-light#main-title .tabs a:hover {
         opacity: 1; }
-    .hero.is-light .tabs li.is-active a {
+    .hero.is-light .tabs li.is-active a, .is-light#main-title .tabs li.is-active a {
       opacity: 1; }
-    .hero.is-light .tabs.is-boxed a, .hero.is-light .tabs.is-toggle a {
+    .hero.is-light .tabs.is-boxed a, .is-light#main-title .tabs.is-boxed a, .hero.is-light .tabs.is-toggle a, .is-light#main-title .tabs.is-toggle a {
       color: rgba(0, 0, 0, 0.7); }
-      .hero.is-light .tabs.is-boxed a:hover, .hero.is-light .tabs.is-toggle a:hover {
+      .hero.is-light .tabs.is-boxed a:hover, .is-light#main-title .tabs.is-boxed a:hover, .hero.is-light .tabs.is-toggle a:hover, .is-light#main-title .tabs.is-toggle a:hover {
         background-color: rgba(10, 10, 10, 0.1); }
-    .hero.is-light .tabs.is-boxed li.is-active a, .hero.is-light .tabs.is-boxed li.is-active a:hover, .hero.is-light .tabs.is-toggle li.is-active a, .hero.is-light .tabs.is-toggle li.is-active a:hover {
+    .hero.is-light .tabs.is-boxed li.is-active a, .is-light#main-title .tabs.is-boxed li.is-active a, .hero.is-light .tabs.is-boxed li.is-active a:hover, .is-light#main-title .tabs.is-boxed li.is-active a:hover, .hero.is-light .tabs.is-toggle li.is-active a, .is-light#main-title .tabs.is-toggle li.is-active a, .hero.is-light .tabs.is-toggle li.is-active a:hover, .is-light#main-title .tabs.is-toggle li.is-active a:hover {
       background-color: rgba(0, 0, 0, 0.7);
       border-color: rgba(0, 0, 0, 0.7);
       color: whitesmoke; }
-    .hero.is-light.is-bold {
+    .hero.is-light.is-bold, .is-light.is-bold#main-title {
       background-image: linear-gradient(141deg, #dfd8d9 0%, whitesmoke 71%, white 100%); }
       @media screen and (max-width: 768px) {
-        .hero.is-light.is-bold .navbar-menu {
+        .hero.is-light.is-bold .navbar-menu, .is-light.is-bold#main-title .navbar-menu {
           background-image: linear-gradient(141deg, #dfd8d9 0%, whitesmoke 71%, white 100%); } }
-  .hero.is-dark {
+  .hero.is-dark, .is-dark#main-title {
     background-color: #363636;
     color: #fff; }
-    .hero.is-dark a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
-    .hero.is-dark strong {
+    .hero.is-dark a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current), .is-dark#main-title a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
+    .hero.is-dark strong,
+    .is-dark#main-title strong {
       color: inherit; }
-    .hero.is-dark .title {
+    .hero.is-dark .title, .is-dark#main-title .title, .hero.is-dark #main-title h1, #main-title .hero.is-dark h1, .is-dark#main-title h1 {
       color: #fff; }
-    .hero.is-dark .subtitle {
+    .hero.is-dark .subtitle, .is-dark#main-title .subtitle, .hero.is-dark #main-title h2, #main-title .hero.is-dark h2, .is-dark#main-title h2 {
       color: rgba(255, 255, 255, 0.9); }
-      .hero.is-dark .subtitle a:not(.button),
-      .hero.is-dark .subtitle strong {
+      .hero.is-dark .subtitle a:not(.button), .is-dark#main-title .subtitle a:not(.button), .hero.is-dark #main-title h2 a:not(.button), #main-title .hero.is-dark h2 a:not(.button), .is-dark#main-title h2 a:not(.button),
+      .hero.is-dark .subtitle strong,
+      .is-dark#main-title .subtitle strong,
+      .hero.is-dark #main-title h2 strong,
+      #main-title .hero.is-dark h2 strong,
+      .is-dark#main-title h2 strong {
         color: #fff; }
     @media screen and (max-width: 1023px) {
-      .hero.is-dark .navbar-menu {
+      .hero.is-dark .navbar-menu, .is-dark#main-title .navbar-menu {
         background-color: #363636; } }
-    .hero.is-dark .navbar-item,
-    .hero.is-dark .navbar-link {
+    .hero.is-dark .navbar-item, .is-dark#main-title .navbar-item,
+    .hero.is-dark .navbar-link,
+    .is-dark#main-title .navbar-link {
       color: rgba(255, 255, 255, 0.7); }
-    .hero.is-dark a.navbar-item:hover, .hero.is-dark a.navbar-item.is-active,
+    .hero.is-dark a.navbar-item:hover, .is-dark#main-title a.navbar-item:hover, .hero.is-dark a.navbar-item.is-active, .is-dark#main-title a.navbar-item.is-active,
     .hero.is-dark .navbar-link:hover,
-    .hero.is-dark .navbar-link.is-active {
+    .is-dark#main-title .navbar-link:hover,
+    .hero.is-dark .navbar-link.is-active,
+    .is-dark#main-title .navbar-link.is-active {
       background-color: #292929;
       color: #fff; }
-    .hero.is-dark .tabs a {
+    .hero.is-dark .tabs a, .is-dark#main-title .tabs a {
       color: #fff;
       opacity: 0.9; }
-      .hero.is-dark .tabs a:hover {
+      .hero.is-dark .tabs a:hover, .is-dark#main-title .tabs a:hover {
         opacity: 1; }
-    .hero.is-dark .tabs li.is-active a {
+    .hero.is-dark .tabs li.is-active a, .is-dark#main-title .tabs li.is-active a {
       opacity: 1; }
-    .hero.is-dark .tabs.is-boxed a, .hero.is-dark .tabs.is-toggle a {
+    .hero.is-dark .tabs.is-boxed a, .is-dark#main-title .tabs.is-boxed a, .hero.is-dark .tabs.is-toggle a, .is-dark#main-title .tabs.is-toggle a {
       color: #fff; }
-      .hero.is-dark .tabs.is-boxed a:hover, .hero.is-dark .tabs.is-toggle a:hover {
+      .hero.is-dark .tabs.is-boxed a:hover, .is-dark#main-title .tabs.is-boxed a:hover, .hero.is-dark .tabs.is-toggle a:hover, .is-dark#main-title .tabs.is-toggle a:hover {
         background-color: rgba(10, 10, 10, 0.1); }
-    .hero.is-dark .tabs.is-boxed li.is-active a, .hero.is-dark .tabs.is-boxed li.is-active a:hover, .hero.is-dark .tabs.is-toggle li.is-active a, .hero.is-dark .tabs.is-toggle li.is-active a:hover {
+    .hero.is-dark .tabs.is-boxed li.is-active a, .is-dark#main-title .tabs.is-boxed li.is-active a, .hero.is-dark .tabs.is-boxed li.is-active a:hover, .is-dark#main-title .tabs.is-boxed li.is-active a:hover, .hero.is-dark .tabs.is-toggle li.is-active a, .is-dark#main-title .tabs.is-toggle li.is-active a, .hero.is-dark .tabs.is-toggle li.is-active a:hover, .is-dark#main-title .tabs.is-toggle li.is-active a:hover {
       background-color: #fff;
       border-color: #fff;
       color: #363636; }
-    .hero.is-dark.is-bold {
+    .hero.is-dark.is-bold, .is-dark.is-bold#main-title {
       background-image: linear-gradient(141deg, #1f191a 0%, #363636 71%, #46403f 100%); }
       @media screen and (max-width: 768px) {
-        .hero.is-dark.is-bold .navbar-menu {
+        .hero.is-dark.is-bold .navbar-menu, .is-dark.is-bold#main-title .navbar-menu {
           background-image: linear-gradient(141deg, #1f191a 0%, #363636 71%, #46403f 100%); } }
-  .hero.is-primary {
+  .hero.is-primary, .is-primary#main-title, #main-title > div#main-title, #main-title > div.hero {
     background-color: #3bb7b4;
     color: #fff; }
-    .hero.is-primary a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
-    .hero.is-primary strong {
+    .hero.is-primary a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current), .is-primary#main-title a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current), #main-title > div#main-title a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current), #main-title > div.hero a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
+    .hero.is-primary strong,
+    .is-primary#main-title strong,
+    #main-title > div#main-title strong,
+    #main-title > div.hero strong {
       color: inherit; }
-    .hero.is-primary .title {
+    .hero.is-primary .title, .is-primary#main-title .title, #main-title > div#main-title .title, #main-title > div.hero .title, .hero.is-primary #main-title h1, #main-title .hero.is-primary h1, .is-primary#main-title h1, #main-title > div#main-title h1, #main-title > div.hero h1 {
       color: #fff; }
-    .hero.is-primary .subtitle {
+    .hero.is-primary .subtitle, .is-primary#main-title .subtitle, #main-title > div#main-title .subtitle, #main-title > div.hero .subtitle, .hero.is-primary #main-title h2, #main-title .hero.is-primary h2, .is-primary#main-title h2, #main-title > div#main-title h2, #main-title > div.hero h2 {
       color: rgba(255, 255, 255, 0.9); }
-      .hero.is-primary .subtitle a:not(.button),
-      .hero.is-primary .subtitle strong {
+      .hero.is-primary .subtitle a:not(.button), .is-primary#main-title .subtitle a:not(.button), #main-title > div#main-title .subtitle a:not(.button), #main-title > div.hero .subtitle a:not(.button), .hero.is-primary #main-title h2 a:not(.button), #main-title .hero.is-primary h2 a:not(.button), .is-primary#main-title h2 a:not(.button), #main-title > div#main-title h2 a:not(.button), #main-title > div.hero h2 a:not(.button),
+      .hero.is-primary .subtitle strong,
+      .is-primary#main-title .subtitle strong,
+      #main-title > div#main-title .subtitle strong,
+      #main-title > div.hero .subtitle strong,
+      .hero.is-primary #main-title h2 strong,
+      #main-title .hero.is-primary h2 strong,
+      .is-primary#main-title h2 strong,
+      #main-title > div#main-title h2 strong,
+      #main-title > div.hero h2 strong {
         color: #fff; }
     @media screen and (max-width: 1023px) {
-      .hero.is-primary .navbar-menu {
+      .hero.is-primary .navbar-menu, .is-primary#main-title .navbar-menu, #main-title > div#main-title .navbar-menu, #main-title > div.hero .navbar-menu {
         background-color: #3bb7b4; } }
-    .hero.is-primary .navbar-item,
-    .hero.is-primary .navbar-link {
+    .hero.is-primary .navbar-item, .is-primary#main-title .navbar-item, #main-title > div#main-title .navbar-item, #main-title > div.hero .navbar-item,
+    .hero.is-primary .navbar-link,
+    .is-primary#main-title .navbar-link,
+    #main-title > div#main-title .navbar-link,
+    #main-title > div.hero .navbar-link {
       color: rgba(255, 255, 255, 0.7); }
-    .hero.is-primary a.navbar-item:hover, .hero.is-primary a.navbar-item.is-active,
+    .hero.is-primary a.navbar-item:hover, .is-primary#main-title a.navbar-item:hover, #main-title > div#main-title a.navbar-item:hover, #main-title > div.hero a.navbar-item:hover, .hero.is-primary a.navbar-item.is-active, .is-primary#main-title a.navbar-item.is-active, #main-title > div#main-title a.navbar-item.is-active, #main-title > div.hero a.navbar-item.is-active,
     .hero.is-primary .navbar-link:hover,
-    .hero.is-primary .navbar-link.is-active {
+    .is-primary#main-title .navbar-link:hover,
+    #main-title > div#main-title .navbar-link:hover,
+    #main-title > div.hero .navbar-link:hover,
+    .hero.is-primary .navbar-link.is-active,
+    .is-primary#main-title .navbar-link.is-active,
+    #main-title > div#main-title .navbar-link.is-active,
+    #main-title > div.hero .navbar-link.is-active {
       background-color: #35a4a1;
       color: #fff; }
-    .hero.is-primary .tabs a {
+    .hero.is-primary .tabs a, .is-primary#main-title .tabs a, #main-title > div#main-title .tabs a, #main-title > div.hero .tabs a {
       color: #fff;
       opacity: 0.9; }
-      .hero.is-primary .tabs a:hover {
+      .hero.is-primary .tabs a:hover, .is-primary#main-title .tabs a:hover, #main-title > div#main-title .tabs a:hover, #main-title > div.hero .tabs a:hover {
         opacity: 1; }
-    .hero.is-primary .tabs li.is-active a {
+    .hero.is-primary .tabs li.is-active a, .is-primary#main-title .tabs li.is-active a, #main-title > div#main-title .tabs li.is-active a, #main-title > div.hero .tabs li.is-active a {
       opacity: 1; }
-    .hero.is-primary .tabs.is-boxed a, .hero.is-primary .tabs.is-toggle a {
+    .hero.is-primary .tabs.is-boxed a, .is-primary#main-title .tabs.is-boxed a, #main-title > div#main-title .tabs.is-boxed a, #main-title > div.hero .tabs.is-boxed a, .hero.is-primary .tabs.is-toggle a, .is-primary#main-title .tabs.is-toggle a, #main-title > div#main-title .tabs.is-toggle a, #main-title > div.hero .tabs.is-toggle a {
       color: #fff; }
-      .hero.is-primary .tabs.is-boxed a:hover, .hero.is-primary .tabs.is-toggle a:hover {
+      .hero.is-primary .tabs.is-boxed a:hover, .is-primary#main-title .tabs.is-boxed a:hover, #main-title > div#main-title .tabs.is-boxed a:hover, #main-title > div.hero .tabs.is-boxed a:hover, .hero.is-primary .tabs.is-toggle a:hover, .is-primary#main-title .tabs.is-toggle a:hover, #main-title > div#main-title .tabs.is-toggle a:hover, #main-title > div.hero .tabs.is-toggle a:hover {
         background-color: rgba(10, 10, 10, 0.1); }
-    .hero.is-primary .tabs.is-boxed li.is-active a, .hero.is-primary .tabs.is-boxed li.is-active a:hover, .hero.is-primary .tabs.is-toggle li.is-active a, .hero.is-primary .tabs.is-toggle li.is-active a:hover {
+    .hero.is-primary .tabs.is-boxed li.is-active a, .is-primary#main-title .tabs.is-boxed li.is-active a, #main-title > div#main-title .tabs.is-boxed li.is-active a, #main-title > div.hero .tabs.is-boxed li.is-active a, .hero.is-primary .tabs.is-boxed li.is-active a:hover, .is-primary#main-title .tabs.is-boxed li.is-active a:hover, #main-title > div#main-title .tabs.is-boxed li.is-active a:hover, #main-title > div.hero .tabs.is-boxed li.is-active a:hover, .hero.is-primary .tabs.is-toggle li.is-active a, .is-primary#main-title .tabs.is-toggle li.is-active a, #main-title > div#main-title .tabs.is-toggle li.is-active a, #main-title > div.hero .tabs.is-toggle li.is-active a, .hero.is-primary .tabs.is-toggle li.is-active a:hover, .is-primary#main-title .tabs.is-toggle li.is-active a:hover, #main-title > div#main-title .tabs.is-toggle li.is-active a:hover, #main-title > div.hero .tabs.is-toggle li.is-active a:hover {
       background-color: #fff;
       border-color: #fff;
       color: #3bb7b4; }
-    .hero.is-primary.is-bold {
+    .hero.is-primary.is-bold, .is-primary.is-bold#main-title, #main-title > div.is-bold#main-title, #main-title > div.hero.is-bold {
       background-image: linear-gradient(141deg, #259a84 0%, #3bb7b4 71%, #42b7ca 100%); }
       @media screen and (max-width: 768px) {
-        .hero.is-primary.is-bold .navbar-menu {
+        .hero.is-primary.is-bold .navbar-menu, .is-primary.is-bold#main-title .navbar-menu, #main-title > div.is-bold#main-title .navbar-menu, #main-title > div.hero.is-bold .navbar-menu {
           background-image: linear-gradient(141deg, #259a84 0%, #3bb7b4 71%, #42b7ca 100%); } }
-  .hero.is-link {
+  .hero.is-link, .is-link#main-title {
     background-color: #1a6b68;
     color: #fff; }
-    .hero.is-link a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
-    .hero.is-link strong {
+    .hero.is-link a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current), .is-link#main-title a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
+    .hero.is-link strong,
+    .is-link#main-title strong {
       color: inherit; }
-    .hero.is-link .title {
+    .hero.is-link .title, .is-link#main-title .title, .hero.is-link #main-title h1, #main-title .hero.is-link h1, .is-link#main-title h1 {
       color: #fff; }
-    .hero.is-link .subtitle {
+    .hero.is-link .subtitle, .is-link#main-title .subtitle, .hero.is-link #main-title h2, #main-title .hero.is-link h2, .is-link#main-title h2 {
       color: rgba(255, 255, 255, 0.9); }
-      .hero.is-link .subtitle a:not(.button),
-      .hero.is-link .subtitle strong {
+      .hero.is-link .subtitle a:not(.button), .is-link#main-title .subtitle a:not(.button), .hero.is-link #main-title h2 a:not(.button), #main-title .hero.is-link h2 a:not(.button), .is-link#main-title h2 a:not(.button),
+      .hero.is-link .subtitle strong,
+      .is-link#main-title .subtitle strong,
+      .hero.is-link #main-title h2 strong,
+      #main-title .hero.is-link h2 strong,
+      .is-link#main-title h2 strong {
         color: #fff; }
     @media screen and (max-width: 1023px) {
-      .hero.is-link .navbar-menu {
+      .hero.is-link .navbar-menu, .is-link#main-title .navbar-menu {
         background-color: #1a6b68; } }
-    .hero.is-link .navbar-item,
-    .hero.is-link .navbar-link {
+    .hero.is-link .navbar-item, .is-link#main-title .navbar-item,
+    .hero.is-link .navbar-link,
+    .is-link#main-title .navbar-link {
       color: rgba(255, 255, 255, 0.7); }
-    .hero.is-link a.navbar-item:hover, .hero.is-link a.navbar-item.is-active,
+    .hero.is-link a.navbar-item:hover, .is-link#main-title a.navbar-item:hover, .hero.is-link a.navbar-item.is-active, .is-link#main-title a.navbar-item.is-active,
     .hero.is-link .navbar-link:hover,
-    .hero.is-link .navbar-link.is-active {
+    .is-link#main-title .navbar-link:hover,
+    .hero.is-link .navbar-link.is-active,
+    .is-link#main-title .navbar-link.is-active {
       background-color: #155654;
       color: #fff; }
-    .hero.is-link .tabs a {
+    .hero.is-link .tabs a, .is-link#main-title .tabs a {
       color: #fff;
       opacity: 0.9; }
-      .hero.is-link .tabs a:hover {
+      .hero.is-link .tabs a:hover, .is-link#main-title .tabs a:hover {
         opacity: 1; }
-    .hero.is-link .tabs li.is-active a {
+    .hero.is-link .tabs li.is-active a, .is-link#main-title .tabs li.is-active a {
       opacity: 1; }
-    .hero.is-link .tabs.is-boxed a, .hero.is-link .tabs.is-toggle a {
+    .hero.is-link .tabs.is-boxed a, .is-link#main-title .tabs.is-boxed a, .hero.is-link .tabs.is-toggle a, .is-link#main-title .tabs.is-toggle a {
       color: #fff; }
-      .hero.is-link .tabs.is-boxed a:hover, .hero.is-link .tabs.is-toggle a:hover {
+      .hero.is-link .tabs.is-boxed a:hover, .is-link#main-title .tabs.is-boxed a:hover, .hero.is-link .tabs.is-toggle a:hover, .is-link#main-title .tabs.is-toggle a:hover {
         background-color: rgba(10, 10, 10, 0.1); }
-    .hero.is-link .tabs.is-boxed li.is-active a, .hero.is-link .tabs.is-boxed li.is-active a:hover, .hero.is-link .tabs.is-toggle li.is-active a, .hero.is-link .tabs.is-toggle li.is-active a:hover {
+    .hero.is-link .tabs.is-boxed li.is-active a, .is-link#main-title .tabs.is-boxed li.is-active a, .hero.is-link .tabs.is-boxed li.is-active a:hover, .is-link#main-title .tabs.is-boxed li.is-active a:hover, .hero.is-link .tabs.is-toggle li.is-active a, .is-link#main-title .tabs.is-toggle li.is-active a, .hero.is-link .tabs.is-toggle li.is-active a:hover, .is-link#main-title .tabs.is-toggle li.is-active a:hover {
       background-color: #fff;
       border-color: #fff;
       color: #1a6b68; }
-    .hero.is-link.is-bold {
+    .hero.is-link.is-bold, .is-link.is-bold#main-title {
       background-image: linear-gradient(141deg, #0c463a 0%, #1a6b68 71%, #1b7683 100%); }
       @media screen and (max-width: 768px) {
-        .hero.is-link.is-bold .navbar-menu {
+        .hero.is-link.is-bold .navbar-menu, .is-link.is-bold#main-title .navbar-menu {
           background-image: linear-gradient(141deg, #0c463a 0%, #1a6b68 71%, #1b7683 100%); } }
-  .hero.is-info {
+  .hero.is-info, .is-info#main-title {
     background-color: #3298dc;
     color: #fff; }
-    .hero.is-info a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
-    .hero.is-info strong {
+    .hero.is-info a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current), .is-info#main-title a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
+    .hero.is-info strong,
+    .is-info#main-title strong {
       color: inherit; }
-    .hero.is-info .title {
+    .hero.is-info .title, .is-info#main-title .title, .hero.is-info #main-title h1, #main-title .hero.is-info h1, .is-info#main-title h1 {
       color: #fff; }
-    .hero.is-info .subtitle {
+    .hero.is-info .subtitle, .is-info#main-title .subtitle, .hero.is-info #main-title h2, #main-title .hero.is-info h2, .is-info#main-title h2 {
       color: rgba(255, 255, 255, 0.9); }
-      .hero.is-info .subtitle a:not(.button),
-      .hero.is-info .subtitle strong {
+      .hero.is-info .subtitle a:not(.button), .is-info#main-title .subtitle a:not(.button), .hero.is-info #main-title h2 a:not(.button), #main-title .hero.is-info h2 a:not(.button), .is-info#main-title h2 a:not(.button),
+      .hero.is-info .subtitle strong,
+      .is-info#main-title .subtitle strong,
+      .hero.is-info #main-title h2 strong,
+      #main-title .hero.is-info h2 strong,
+      .is-info#main-title h2 strong {
         color: #fff; }
     @media screen and (max-width: 1023px) {
-      .hero.is-info .navbar-menu {
+      .hero.is-info .navbar-menu, .is-info#main-title .navbar-menu {
         background-color: #3298dc; } }
-    .hero.is-info .navbar-item,
-    .hero.is-info .navbar-link {
+    .hero.is-info .navbar-item, .is-info#main-title .navbar-item,
+    .hero.is-info .navbar-link,
+    .is-info#main-title .navbar-link {
       color: rgba(255, 255, 255, 0.7); }
-    .hero.is-info a.navbar-item:hover, .hero.is-info a.navbar-item.is-active,
+    .hero.is-info a.navbar-item:hover, .is-info#main-title a.navbar-item:hover, .hero.is-info a.navbar-item.is-active, .is-info#main-title a.navbar-item.is-active,
     .hero.is-info .navbar-link:hover,
-    .hero.is-info .navbar-link.is-active {
+    .is-info#main-title .navbar-link:hover,
+    .hero.is-info .navbar-link.is-active,
+    .is-info#main-title .navbar-link.is-active {
       background-color: #238cd1;
       color: #fff; }
-    .hero.is-info .tabs a {
+    .hero.is-info .tabs a, .is-info#main-title .tabs a {
       color: #fff;
       opacity: 0.9; }
-      .hero.is-info .tabs a:hover {
+      .hero.is-info .tabs a:hover, .is-info#main-title .tabs a:hover {
         opacity: 1; }
-    .hero.is-info .tabs li.is-active a {
+    .hero.is-info .tabs li.is-active a, .is-info#main-title .tabs li.is-active a {
       opacity: 1; }
-    .hero.is-info .tabs.is-boxed a, .hero.is-info .tabs.is-toggle a {
+    .hero.is-info .tabs.is-boxed a, .is-info#main-title .tabs.is-boxed a, .hero.is-info .tabs.is-toggle a, .is-info#main-title .tabs.is-toggle a {
       color: #fff; }
-      .hero.is-info .tabs.is-boxed a:hover, .hero.is-info .tabs.is-toggle a:hover {
+      .hero.is-info .tabs.is-boxed a:hover, .is-info#main-title .tabs.is-boxed a:hover, .hero.is-info .tabs.is-toggle a:hover, .is-info#main-title .tabs.is-toggle a:hover {
         background-color: rgba(10, 10, 10, 0.1); }
-    .hero.is-info .tabs.is-boxed li.is-active a, .hero.is-info .tabs.is-boxed li.is-active a:hover, .hero.is-info .tabs.is-toggle li.is-active a, .hero.is-info .tabs.is-toggle li.is-active a:hover {
+    .hero.is-info .tabs.is-boxed li.is-active a, .is-info#main-title .tabs.is-boxed li.is-active a, .hero.is-info .tabs.is-boxed li.is-active a:hover, .is-info#main-title .tabs.is-boxed li.is-active a:hover, .hero.is-info .tabs.is-toggle li.is-active a, .is-info#main-title .tabs.is-toggle li.is-active a, .hero.is-info .tabs.is-toggle li.is-active a:hover, .is-info#main-title .tabs.is-toggle li.is-active a:hover {
       background-color: #fff;
       border-color: #fff;
       color: #3298dc; }
-    .hero.is-info.is-bold {
+    .hero.is-info.is-bold, .is-info.is-bold#main-title {
       background-image: linear-gradient(141deg, #159dc6 0%, #3298dc 71%, #4389e5 100%); }
       @media screen and (max-width: 768px) {
-        .hero.is-info.is-bold .navbar-menu {
+        .hero.is-info.is-bold .navbar-menu, .is-info.is-bold#main-title .navbar-menu {
           background-image: linear-gradient(141deg, #159dc6 0%, #3298dc 71%, #4389e5 100%); } }
-  .hero.is-success {
+  .hero.is-success, .is-success#main-title {
     background-color: #1a6b68;
     color: #fff; }
-    .hero.is-success a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
-    .hero.is-success strong {
+    .hero.is-success a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current), .is-success#main-title a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
+    .hero.is-success strong,
+    .is-success#main-title strong {
       color: inherit; }
-    .hero.is-success .title {
+    .hero.is-success .title, .is-success#main-title .title, .hero.is-success #main-title h1, #main-title .hero.is-success h1, .is-success#main-title h1 {
       color: #fff; }
-    .hero.is-success .subtitle {
+    .hero.is-success .subtitle, .is-success#main-title .subtitle, .hero.is-success #main-title h2, #main-title .hero.is-success h2, .is-success#main-title h2 {
       color: rgba(255, 255, 255, 0.9); }
-      .hero.is-success .subtitle a:not(.button),
-      .hero.is-success .subtitle strong {
+      .hero.is-success .subtitle a:not(.button), .is-success#main-title .subtitle a:not(.button), .hero.is-success #main-title h2 a:not(.button), #main-title .hero.is-success h2 a:not(.button), .is-success#main-title h2 a:not(.button),
+      .hero.is-success .subtitle strong,
+      .is-success#main-title .subtitle strong,
+      .hero.is-success #main-title h2 strong,
+      #main-title .hero.is-success h2 strong,
+      .is-success#main-title h2 strong {
         color: #fff; }
     @media screen and (max-width: 1023px) {
-      .hero.is-success .navbar-menu {
+      .hero.is-success .navbar-menu, .is-success#main-title .navbar-menu {
         background-color: #1a6b68; } }
-    .hero.is-success .navbar-item,
-    .hero.is-success .navbar-link {
+    .hero.is-success .navbar-item, .is-success#main-title .navbar-item,
+    .hero.is-success .navbar-link,
+    .is-success#main-title .navbar-link {
       color: rgba(255, 255, 255, 0.7); }
-    .hero.is-success a.navbar-item:hover, .hero.is-success a.navbar-item.is-active,
+    .hero.is-success a.navbar-item:hover, .is-success#main-title a.navbar-item:hover, .hero.is-success a.navbar-item.is-active, .is-success#main-title a.navbar-item.is-active,
     .hero.is-success .navbar-link:hover,
-    .hero.is-success .navbar-link.is-active {
+    .is-success#main-title .navbar-link:hover,
+    .hero.is-success .navbar-link.is-active,
+    .is-success#main-title .navbar-link.is-active {
       background-color: #155654;
       color: #fff; }
-    .hero.is-success .tabs a {
+    .hero.is-success .tabs a, .is-success#main-title .tabs a {
       color: #fff;
       opacity: 0.9; }
-      .hero.is-success .tabs a:hover {
+      .hero.is-success .tabs a:hover, .is-success#main-title .tabs a:hover {
         opacity: 1; }
-    .hero.is-success .tabs li.is-active a {
+    .hero.is-success .tabs li.is-active a, .is-success#main-title .tabs li.is-active a {
       opacity: 1; }
-    .hero.is-success .tabs.is-boxed a, .hero.is-success .tabs.is-toggle a {
+    .hero.is-success .tabs.is-boxed a, .is-success#main-title .tabs.is-boxed a, .hero.is-success .tabs.is-toggle a, .is-success#main-title .tabs.is-toggle a {
       color: #fff; }
-      .hero.is-success .tabs.is-boxed a:hover, .hero.is-success .tabs.is-toggle a:hover {
+      .hero.is-success .tabs.is-boxed a:hover, .is-success#main-title .tabs.is-boxed a:hover, .hero.is-success .tabs.is-toggle a:hover, .is-success#main-title .tabs.is-toggle a:hover {
         background-color: rgba(10, 10, 10, 0.1); }
-    .hero.is-success .tabs.is-boxed li.is-active a, .hero.is-success .tabs.is-boxed li.is-active a:hover, .hero.is-success .tabs.is-toggle li.is-active a, .hero.is-success .tabs.is-toggle li.is-active a:hover {
+    .hero.is-success .tabs.is-boxed li.is-active a, .is-success#main-title .tabs.is-boxed li.is-active a, .hero.is-success .tabs.is-boxed li.is-active a:hover, .is-success#main-title .tabs.is-boxed li.is-active a:hover, .hero.is-success .tabs.is-toggle li.is-active a, .is-success#main-title .tabs.is-toggle li.is-active a, .hero.is-success .tabs.is-toggle li.is-active a:hover, .is-success#main-title .tabs.is-toggle li.is-active a:hover {
       background-color: #fff;
       border-color: #fff;
       color: #1a6b68; }
-    .hero.is-success.is-bold {
+    .hero.is-success.is-bold, .is-success.is-bold#main-title {
       background-image: linear-gradient(141deg, #0c463a 0%, #1a6b68 71%, #1b7683 100%); }
       @media screen and (max-width: 768px) {
-        .hero.is-success.is-bold .navbar-menu {
+        .hero.is-success.is-bold .navbar-menu, .is-success.is-bold#main-title .navbar-menu {
           background-image: linear-gradient(141deg, #0c463a 0%, #1a6b68 71%, #1b7683 100%); } }
-  .hero.is-warning {
+  .hero.is-warning, .is-warning#main-title {
     background-color: #fdc20c;
     color: rgba(0, 0, 0, 0.7); }
-    .hero.is-warning a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
-    .hero.is-warning strong {
+    .hero.is-warning a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current), .is-warning#main-title a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
+    .hero.is-warning strong,
+    .is-warning#main-title strong {
       color: inherit; }
-    .hero.is-warning .title {
+    .hero.is-warning .title, .is-warning#main-title .title, .hero.is-warning #main-title h1, #main-title .hero.is-warning h1, .is-warning#main-title h1 {
       color: rgba(0, 0, 0, 0.7); }
-    .hero.is-warning .subtitle {
+    .hero.is-warning .subtitle, .is-warning#main-title .subtitle, .hero.is-warning #main-title h2, #main-title .hero.is-warning h2, .is-warning#main-title h2 {
       color: rgba(0, 0, 0, 0.9); }
-      .hero.is-warning .subtitle a:not(.button),
-      .hero.is-warning .subtitle strong {
+      .hero.is-warning .subtitle a:not(.button), .is-warning#main-title .subtitle a:not(.button), .hero.is-warning #main-title h2 a:not(.button), #main-title .hero.is-warning h2 a:not(.button), .is-warning#main-title h2 a:not(.button),
+      .hero.is-warning .subtitle strong,
+      .is-warning#main-title .subtitle strong,
+      .hero.is-warning #main-title h2 strong,
+      #main-title .hero.is-warning h2 strong,
+      .is-warning#main-title h2 strong {
         color: rgba(0, 0, 0, 0.7); }
     @media screen and (max-width: 1023px) {
-      .hero.is-warning .navbar-menu {
+      .hero.is-warning .navbar-menu, .is-warning#main-title .navbar-menu {
         background-color: #fdc20c; } }
-    .hero.is-warning .navbar-item,
-    .hero.is-warning .navbar-link {
+    .hero.is-warning .navbar-item, .is-warning#main-title .navbar-item,
+    .hero.is-warning .navbar-link,
+    .is-warning#main-title .navbar-link {
       color: rgba(0, 0, 0, 0.7); }
-    .hero.is-warning a.navbar-item:hover, .hero.is-warning a.navbar-item.is-active,
+    .hero.is-warning a.navbar-item:hover, .is-warning#main-title a.navbar-item:hover, .hero.is-warning a.navbar-item.is-active, .is-warning#main-title a.navbar-item.is-active,
     .hero.is-warning .navbar-link:hover,
-    .hero.is-warning .navbar-link.is-active {
+    .is-warning#main-title .navbar-link:hover,
+    .hero.is-warning .navbar-link.is-active,
+    .is-warning#main-title .navbar-link.is-active {
       background-color: #eeb402;
       color: rgba(0, 0, 0, 0.7); }
-    .hero.is-warning .tabs a {
+    .hero.is-warning .tabs a, .is-warning#main-title .tabs a {
       color: rgba(0, 0, 0, 0.7);
       opacity: 0.9; }
-      .hero.is-warning .tabs a:hover {
+      .hero.is-warning .tabs a:hover, .is-warning#main-title .tabs a:hover {
         opacity: 1; }
-    .hero.is-warning .tabs li.is-active a {
+    .hero.is-warning .tabs li.is-active a, .is-warning#main-title .tabs li.is-active a {
       opacity: 1; }
-    .hero.is-warning .tabs.is-boxed a, .hero.is-warning .tabs.is-toggle a {
+    .hero.is-warning .tabs.is-boxed a, .is-warning#main-title .tabs.is-boxed a, .hero.is-warning .tabs.is-toggle a, .is-warning#main-title .tabs.is-toggle a {
       color: rgba(0, 0, 0, 0.7); }
-      .hero.is-warning .tabs.is-boxed a:hover, .hero.is-warning .tabs.is-toggle a:hover {
+      .hero.is-warning .tabs.is-boxed a:hover, .is-warning#main-title .tabs.is-boxed a:hover, .hero.is-warning .tabs.is-toggle a:hover, .is-warning#main-title .tabs.is-toggle a:hover {
         background-color: rgba(10, 10, 10, 0.1); }
-    .hero.is-warning .tabs.is-boxed li.is-active a, .hero.is-warning .tabs.is-boxed li.is-active a:hover, .hero.is-warning .tabs.is-toggle li.is-active a, .hero.is-warning .tabs.is-toggle li.is-active a:hover {
+    .hero.is-warning .tabs.is-boxed li.is-active a, .is-warning#main-title .tabs.is-boxed li.is-active a, .hero.is-warning .tabs.is-boxed li.is-active a:hover, .is-warning#main-title .tabs.is-boxed li.is-active a:hover, .hero.is-warning .tabs.is-toggle li.is-active a, .is-warning#main-title .tabs.is-toggle li.is-active a, .hero.is-warning .tabs.is-toggle li.is-active a:hover, .is-warning#main-title .tabs.is-toggle li.is-active a:hover {
       background-color: rgba(0, 0, 0, 0.7);
       border-color: rgba(0, 0, 0, 0.7);
       color: #fdc20c; }
-    .hero.is-warning.is-bold {
+    .hero.is-warning.is-bold, .is-warning.is-bold#main-title {
       background-image: linear-gradient(141deg, #d67e00 0%, #fdc20c 71%, #ffee24 100%); }
       @media screen and (max-width: 768px) {
-        .hero.is-warning.is-bold .navbar-menu {
+        .hero.is-warning.is-bold .navbar-menu, .is-warning.is-bold#main-title .navbar-menu {
           background-image: linear-gradient(141deg, #d67e00 0%, #fdc20c 71%, #ffee24 100%); } }
-  .hero.is-danger {
+  .hero.is-danger, .is-danger#main-title {
     background-color: #f14668;
     color: #fff; }
-    .hero.is-danger a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
-    .hero.is-danger strong {
+    .hero.is-danger a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current), .is-danger#main-title a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
+    .hero.is-danger strong,
+    .is-danger#main-title strong {
       color: inherit; }
-    .hero.is-danger .title {
+    .hero.is-danger .title, .is-danger#main-title .title, .hero.is-danger #main-title h1, #main-title .hero.is-danger h1, .is-danger#main-title h1 {
       color: #fff; }
-    .hero.is-danger .subtitle {
+    .hero.is-danger .subtitle, .is-danger#main-title .subtitle, .hero.is-danger #main-title h2, #main-title .hero.is-danger h2, .is-danger#main-title h2 {
       color: rgba(255, 255, 255, 0.9); }
-      .hero.is-danger .subtitle a:not(.button),
-      .hero.is-danger .subtitle strong {
+      .hero.is-danger .subtitle a:not(.button), .is-danger#main-title .subtitle a:not(.button), .hero.is-danger #main-title h2 a:not(.button), #main-title .hero.is-danger h2 a:not(.button), .is-danger#main-title h2 a:not(.button),
+      .hero.is-danger .subtitle strong,
+      .is-danger#main-title .subtitle strong,
+      .hero.is-danger #main-title h2 strong,
+      #main-title .hero.is-danger h2 strong,
+      .is-danger#main-title h2 strong {
         color: #fff; }
     @media screen and (max-width: 1023px) {
-      .hero.is-danger .navbar-menu {
+      .hero.is-danger .navbar-menu, .is-danger#main-title .navbar-menu {
         background-color: #f14668; } }
-    .hero.is-danger .navbar-item,
-    .hero.is-danger .navbar-link {
+    .hero.is-danger .navbar-item, .is-danger#main-title .navbar-item,
+    .hero.is-danger .navbar-link,
+    .is-danger#main-title .navbar-link {
       color: rgba(255, 255, 255, 0.7); }
-    .hero.is-danger a.navbar-item:hover, .hero.is-danger a.navbar-item.is-active,
+    .hero.is-danger a.navbar-item:hover, .is-danger#main-title a.navbar-item:hover, .hero.is-danger a.navbar-item.is-active, .is-danger#main-title a.navbar-item.is-active,
     .hero.is-danger .navbar-link:hover,
-    .hero.is-danger .navbar-link.is-active {
+    .is-danger#main-title .navbar-link:hover,
+    .hero.is-danger .navbar-link.is-active,
+    .is-danger#main-title .navbar-link.is-active {
       background-color: #ef2e55;
       color: #fff; }
-    .hero.is-danger .tabs a {
+    .hero.is-danger .tabs a, .is-danger#main-title .tabs a {
       color: #fff;
       opacity: 0.9; }
-      .hero.is-danger .tabs a:hover {
+      .hero.is-danger .tabs a:hover, .is-danger#main-title .tabs a:hover {
         opacity: 1; }
-    .hero.is-danger .tabs li.is-active a {
+    .hero.is-danger .tabs li.is-active a, .is-danger#main-title .tabs li.is-active a {
       opacity: 1; }
-    .hero.is-danger .tabs.is-boxed a, .hero.is-danger .tabs.is-toggle a {
+    .hero.is-danger .tabs.is-boxed a, .is-danger#main-title .tabs.is-boxed a, .hero.is-danger .tabs.is-toggle a, .is-danger#main-title .tabs.is-toggle a {
       color: #fff; }
-      .hero.is-danger .tabs.is-boxed a:hover, .hero.is-danger .tabs.is-toggle a:hover {
+      .hero.is-danger .tabs.is-boxed a:hover, .is-danger#main-title .tabs.is-boxed a:hover, .hero.is-danger .tabs.is-toggle a:hover, .is-danger#main-title .tabs.is-toggle a:hover {
         background-color: rgba(10, 10, 10, 0.1); }
-    .hero.is-danger .tabs.is-boxed li.is-active a, .hero.is-danger .tabs.is-boxed li.is-active a:hover, .hero.is-danger .tabs.is-toggle li.is-active a, .hero.is-danger .tabs.is-toggle li.is-active a:hover {
+    .hero.is-danger .tabs.is-boxed li.is-active a, .is-danger#main-title .tabs.is-boxed li.is-active a, .hero.is-danger .tabs.is-boxed li.is-active a:hover, .is-danger#main-title .tabs.is-boxed li.is-active a:hover, .hero.is-danger .tabs.is-toggle li.is-active a, .is-danger#main-title .tabs.is-toggle li.is-active a, .hero.is-danger .tabs.is-toggle li.is-active a:hover, .is-danger#main-title .tabs.is-toggle li.is-active a:hover {
       background-color: #fff;
       border-color: #fff;
       color: #f14668; }
-    .hero.is-danger.is-bold {
+    .hero.is-danger.is-bold, .is-danger.is-bold#main-title {
       background-image: linear-gradient(141deg, #fa0a62 0%, #f14668 71%, #f7595f 100%); }
       @media screen and (max-width: 768px) {
-        .hero.is-danger.is-bold .navbar-menu {
+        .hero.is-danger.is-bold .navbar-menu, .is-danger.is-bold#main-title .navbar-menu {
           background-image: linear-gradient(141deg, #fa0a62 0%, #f14668 71%, #f7595f 100%); } }
-  .hero.is-small .hero-body {
+  .hero.is-small .hero-body, .is-small#main-title .hero-body, .hero.is-small #main-title > div, .is-small#main-title #main-title > div {
     padding: 1.5rem; }
   @media screen and (min-width: 769px), print {
-    .hero.is-medium .hero-body {
+    .hero.is-medium .hero-body, .is-medium#main-title .hero-body, .hero.is-medium #main-title > div, .is-medium#main-title #main-title > div {
       padding: 9rem 1.5rem; } }
   @media screen and (min-width: 769px), print {
-    .hero.is-large .hero-body {
+    .hero.is-large .hero-body, .is-large#main-title .hero-body, .hero.is-large #main-title > div, .is-large#main-title #main-title > div {
       padding: 18rem 1.5rem; } }
-  .hero.is-halfheight .hero-body, .hero.is-fullheight .hero-body, .hero.is-fullheight-with-navbar .hero-body {
+  .hero.is-halfheight .hero-body, .is-halfheight#main-title .hero-body, .hero.is-halfheight #main-title > div, .is-halfheight#main-title #main-title > div, .hero.is-fullheight .hero-body, .is-fullheight#main-title .hero-body, .hero.is-fullheight #main-title > div, .is-fullheight#main-title #main-title > div, .hero.is-fullheight-with-navbar .hero-body, #main-title .hero-body, .hero.is-fullheight-with-navbar #main-title > div, #main-title > div {
     align-items: center;
     display: flex; }
-    .hero.is-halfheight .hero-body > .container, .hero.is-fullheight .hero-body > .container, .hero.is-fullheight-with-navbar .hero-body > .container {
+    .hero.is-halfheight .hero-body > .container, .is-halfheight#main-title .hero-body > .container, .hero.is-halfheight #main-title > div > .container, .is-halfheight#main-title #main-title > div > .container, .hero.is-fullheight .hero-body > .container, .is-fullheight#main-title .hero-body > .container, .hero.is-fullheight #main-title > div > .container, .is-fullheight#main-title #main-title > div > .container, .hero.is-fullheight-with-navbar .hero-body > .container, #main-title .hero-body > .container, .hero.is-fullheight-with-navbar #main-title > div > .container, #main-title > div > .container {
       flex-grow: 1;
       flex-shrink: 1; }
-  .hero.is-halfheight {
+  .hero.is-halfheight, .is-halfheight#main-title {
     min-height: 50vh; }
-  .hero.is-fullheight {
+  .hero.is-fullheight, .is-fullheight#main-title {
     min-height: 100vh; }
 
 .hero-video {
@@ -7142,7 +7270,7 @@ label.panel-block {
   flex-grow: 0;
   flex-shrink: 0; }
 
-.hero-body {
+.hero-body, #main-title > div {
   flex-grow: 1;
   flex-shrink: 0;
   padding: 3rem 1.5rem; }
@@ -7262,14 +7390,16 @@ label.panel-block {
     .slider-pagination {
       display: flex; } }
 
-.hero.has-carousel {
+.hero.has-carousel, .has-carousel#main-title {
   position: relative; }
-  .hero.has-carousel + .hero-body,
+  .hero.has-carousel + .hero-body, .has-carousel#main-title + .hero-body, #main-title > .hero.has-carousel + div, #main-title > .has-carousel#main-title + div,
   .hero.has-carousel + .hero-head,
-  .hero.has-carousel + .hero-footer {
+  .has-carousel#main-title + .hero-head,
+  .hero.has-carousel + .hero-footer,
+  .has-carousel#main-title + .hero-footer {
     z-index: 10;
     overflow: hidden; }
-  .hero.has-carousel .hero-carousel {
+  .hero.has-carousel .hero-carousel, .has-carousel#main-title .hero-carousel {
     position: absolute;
     top: 0;
     left: 0;
@@ -7280,21 +7410,21 @@ label.panel-block {
     margin: auto;
     padding: 0;
     z-index: 0; }
-    .hero.has-carousel .hero-carousel .slider {
+    .hero.has-carousel .hero-carousel .slider, .has-carousel#main-title .hero-carousel .slider {
       width: 100%;
       max-width: 100%;
       overflow: hidden;
       height: 100% !important;
       max-height: 100%;
       z-index: 0; }
-      .hero.has-carousel .hero-carousel .slider .has-background {
+      .hero.has-carousel .hero-carousel .slider .has-background, .has-carousel#main-title .hero-carousel .slider .has-background {
         max-height: 100%; }
-        .hero.has-carousel .hero-carousel .slider .has-background .is-background {
+        .hero.has-carousel .hero-carousel .slider .has-background .is-background, .has-carousel#main-title .hero-carousel .slider .has-background .is-background {
           object-fit: cover;
           object-position: center center;
           height: 100%;
           width: 100%; }
-  .hero.has-carousel .hero-body {
+  .hero.has-carousel .hero-body, .has-carousel#main-title .hero-body, .hero.has-carousel #main-title > div, .has-carousel#main-title #main-title > div {
     margin: 0 3rem;
     z-index: 10; }
 
@@ -7305,7 +7435,7 @@ li {
   width: 256px;
   height: 256px; }
 
-.has-margin-auto {
+.has-margin-auto, #main-title > div {
   margin: auto; }
 
 .has-opacity-40 {
@@ -7404,16 +7534,16 @@ li {
 .has-text-shadow-white {
   text-shadow: 0px 0px 50px white; }
 
-.has-text-shadow-black {
+.has-text-shadow-black, #main-title h1, #main-title h2 {
   text-shadow: 0px 0px 50px black; }
 
-.has-hero-background {
+.has-hero-background, #main-title {
   background: rgba(50, 138, 129, 0.3); }
 
-.has-hero {
+.has-hero, #main-title {
   position: relative; }
 
-.has-hero-img::after {
+.has-hero-img::after, #main-title > div::after {
   content: "";
   top: 0;
   left: 0;
@@ -7425,7 +7555,7 @@ li {
   background-size: cover;
   background-position: center center; }
 
-.hero-background::after {
+.hero-background::after, #main-title > div::after {
   background-image: url("../design/bg/Cactus1.1.jpg"); }
 
 .outer-hero::after {

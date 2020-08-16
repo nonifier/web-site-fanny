@@ -166,3 +166,34 @@ li { margin: 0.5rem auto; }
     clip-path: circle(80% at 100vw 70%);
 }
 
+
+#main-title {
+    @extend .hero; 
+    @extend .is-fullheight-with-navbar; 
+    @extend .has-hero; 
+    @extend .has-hero-background;
+
+    > div {
+        @extend .has-hero-img;
+        @extend .hero-background ;
+        @extend .hero-body ;
+        @extend .is-primary ;
+        @extend .has-margin-auto;
+    }
+    h1, h2 {
+        @extend .has-text-white;
+        @extend .has-text-shadow-black;
+    }
+    h1 {
+        @extend .is-1;
+        @extend .is-size-3-mobile;
+        @extend .is-uppercase;
+        @extend .title;
+    }
+    h2 {
+        @extend .is-2;
+        @extend .is-capitalized;
+        @extend .is-size-4-mobile;
+        @extend .subtitle;
+    }
+}
