@@ -461,13 +461,13 @@ table th {
     font-size: 3rem !important; }
   .is-size-2-mobile {
     font-size: 2.5rem !important; }
-  .is-size-3-mobile, #main-title h1 {
+  .is-size-3-mobile, h1 {
     font-size: 2rem !important; }
-  .is-size-4-mobile, #main-title h2 {
+  .is-size-4-mobile, h2 {
     font-size: 1.5rem !important; }
-  .is-size-5-mobile {
+  .is-size-5-mobile, h3 {
     font-size: 1.25rem !important; }
-  .is-size-6-mobile {
+  .is-size-6-mobile, h4 {
     font-size: 1rem !important; }
   .is-size-7-mobile {
     font-size: 0.75rem !important; } }
@@ -2894,13 +2894,13 @@ a.tag:hover {
     margin-top: -0.75rem; }
   .title:not(.is-spaced) + .subtitle, #main-title h1:not(.is-spaced) + .subtitle, #main-title .title:not(.is-spaced) + h2, #main-title h1:not(.is-spaced) + h2 {
     margin-top: -1.25rem; }
-  .title.is-1, #main-title h1 {
+  .title.is-1, h1.title, #main-title h1 {
     font-size: 3rem; }
-  .title.is-2, #main-title h1.is-2, #main-title h2.title {
+  .title.is-2, h2.title, #main-title h1.is-2 {
     font-size: 2.5rem; }
-  .title.is-3, #main-title h1.is-3 {
+  .title.is-3, h3.title, #main-title h1.is-3 {
     font-size: 2rem; }
-  .title.is-4, #main-title h1.is-4 {
+  .title.is-4, h4.title, #main-title h1.is-4 {
     font-size: 1.5rem; }
   .title.is-5, #main-title h1.is-5 {
     font-size: 1.25rem; }
@@ -2921,13 +2921,13 @@ a.tag:hover {
     font-weight: 600; }
   .subtitle:not(.is-spaced) + .title, #main-title h2:not(.is-spaced) + .title, #main-title .subtitle:not(.is-spaced) + h1, #main-title h2:not(.is-spaced) + h1 {
     margin-top: -1.25rem; }
-  .subtitle.is-1, #main-title h1.subtitle, #main-title h2.is-1 {
+  .subtitle.is-1, h1.subtitle, #main-title h2.is-1 {
     font-size: 3rem; }
-  .subtitle.is-2, #main-title h2 {
+  .subtitle.is-2, h2.subtitle, #main-title h2 {
     font-size: 2.5rem; }
-  .subtitle.is-3, #main-title h2.is-3 {
+  .subtitle.is-3, h3.subtitle, #main-title h2.is-3 {
     font-size: 2rem; }
-  .subtitle.is-4, #main-title h2.is-4 {
+  .subtitle.is-4, h4.subtitle, #main-title h2.is-4 {
     font-size: 1.5rem; }
   .subtitle.is-5, #main-title h2.is-5 {
     font-size: 1.25rem; }
@@ -6586,22 +6586,22 @@ label.panel-block {
     width: 0%; }
   .columns.is-mobile > .column.is-offset-0 {
     margin-left: 0%; }
-  .columns.is-mobile > .column.is-1, #main-title .columns.is-mobile > h1.column {
+  .columns.is-mobile > .column.is-1, .columns.is-mobile > h1.column {
     flex: none;
     width: 8.33333%; }
   .columns.is-mobile > .column.is-offset-1 {
     margin-left: 8.33333%; }
-  .columns.is-mobile > .column.is-2, #main-title .columns.is-mobile > h2.column {
+  .columns.is-mobile > .column.is-2, .columns.is-mobile > h2.column {
     flex: none;
     width: 16.66667%; }
   .columns.is-mobile > .column.is-offset-2 {
     margin-left: 16.66667%; }
-  .columns.is-mobile > .column.is-3 {
+  .columns.is-mobile > .column.is-3, .columns.is-mobile > h3.column {
     flex: none;
     width: 25%; }
   .columns.is-mobile > .column.is-offset-3 {
     margin-left: 25%; }
-  .columns.is-mobile > .column.is-4 {
+  .columns.is-mobile > .column.is-4, .columns.is-mobile > h4.column {
     flex: none;
     width: 33.33333%; }
   .columns.is-mobile > .column.is-offset-4 {
@@ -6818,22 +6818,22 @@ label.panel-block {
       width: 0%; }
     .column.is-offset-0, .column.is-offset-0-tablet {
       margin-left: 0%; }
-    .column.is-1, #main-title h1.column, .column.is-1-tablet {
+    .column.is-1, h1.column, .column.is-1-tablet {
       flex: none;
       width: 8.33333%; }
     .column.is-offset-1, .column.is-offset-1-tablet {
       margin-left: 8.33333%; }
-    .column.is-2, #main-title h2.column, .column.is-2-tablet {
+    .column.is-2, h2.column, .column.is-2-tablet {
       flex: none;
       width: 16.66667%; }
     .column.is-offset-2, .column.is-offset-2-tablet {
       margin-left: 16.66667%; }
-    .column.is-3, .column.is-3-tablet {
+    .column.is-3, h3.column, .column.is-3-tablet {
       flex: none;
       width: 25%; }
     .column.is-offset-3, .column.is-offset-3-tablet {
       margin-left: 25%; }
-    .column.is-4, .column.is-4-tablet {
+    .column.is-4, h4.column, .column.is-4-tablet {
       flex: none;
       width: 33.33333%; }
     .column.is-offset-4, .column.is-offset-4-tablet {
@@ -7413,7 +7413,7 @@ label.panel-block {
   @media screen and (min-width: 1408px) {
     .columns.is-variable.is-0-fullhd {
       --columnGap: 0rem; } }
-  .columns.is-variable.is-1, #main-title h1.columns.is-variable {
+  .columns.is-variable.is-1, h1.columns.is-variable {
     --columnGap: 0.25rem; }
   @media screen and (max-width: 768px) {
     .columns.is-variable.is-1-mobile {
@@ -7442,7 +7442,7 @@ label.panel-block {
   @media screen and (min-width: 1408px) {
     .columns.is-variable.is-1-fullhd {
       --columnGap: 0.25rem; } }
-  .columns.is-variable.is-2, #main-title h2.columns.is-variable {
+  .columns.is-variable.is-2, h2.columns.is-variable {
     --columnGap: 0.5rem; }
   @media screen and (max-width: 768px) {
     .columns.is-variable.is-2-mobile {
@@ -7471,7 +7471,7 @@ label.panel-block {
   @media screen and (min-width: 1408px) {
     .columns.is-variable.is-2-fullhd {
       --columnGap: 0.5rem; } }
-  .columns.is-variable.is-3 {
+  .columns.is-variable.is-3, h3.columns.is-variable {
     --columnGap: 0.75rem; }
   @media screen and (max-width: 768px) {
     .columns.is-variable.is-3-mobile {
@@ -7500,7 +7500,7 @@ label.panel-block {
   @media screen and (min-width: 1408px) {
     .columns.is-variable.is-3-fullhd {
       --columnGap: 0.75rem; } }
-  .columns.is-variable.is-4 {
+  .columns.is-variable.is-4, h4.columns.is-variable {
     --columnGap: 1rem; }
   @media screen and (max-width: 768px) {
     .columns.is-variable.is-4-mobile {
@@ -7672,16 +7672,16 @@ label.panel-block {
   @media screen and (min-width: 769px), print {
     .tile:not(.is-child) {
       display: flex; }
-    .tile.is-1, #main-title h1.tile {
+    .tile.is-1, h1.tile {
       flex: none;
       width: 8.33333%; }
-    .tile.is-2, #main-title h2.tile {
+    .tile.is-2, h2.tile {
       flex: none;
       width: 16.66667%; }
-    .tile.is-3 {
+    .tile.is-3, h3.tile {
       flex: none;
       width: 25%; }
-    .tile.is-4 {
+    .tile.is-4, h4.tile {
       flex: none;
       width: 33.33333%; }
     .tile.is-5 {
