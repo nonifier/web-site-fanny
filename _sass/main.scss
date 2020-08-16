@@ -172,7 +172,17 @@ body {
 
 nav {
     @extend .navbar, .is-fixed-top;
+    >div:first-child {
+        @extend .navbar-brand;
+        span { @extend .navbar-item; }
+    }
+    >div:last-child {
+        @extend .navbar-end;
+        div { @extend .field, .is-grouped; }
+        a { @extend .navbar-item; }
+    }
 }
+
 
 #main-title {
     @extend 
