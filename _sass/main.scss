@@ -41,22 +41,6 @@ $box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.2), 0 0px 0 2px rgba(10, 10
     align-self: flex-start;
 }
  
-.en-quelques-mots {
-    h1, p {
-        position: relative;
-        top: 20%;
-    }
-    img { max-width: 80%; }
-    .fanny { float: right; }
-}
-
-.competencies {
-    .is-child { text-align: center; }
-    .notification { padding: 3rem 1.5rem; }
-    figure { display: inline-block; }
-    img { max-width: 12em; }
-}
-
 .is-centered { 
     display: flex;
     justify-content: center;
@@ -119,6 +103,8 @@ li { margin: 0.5rem auto; }
 .has-height-14rem { height: 14rem; }
 .has-height-15rem { height: 15rem; }
 
+.has-padding-0 { padding: 0; }
+.has-padding-10 { padding: 0; }
 .has-padding-20 { padding: 20%; }
 .has-padding-25 { padding: 25%; }
 .has-padding-30 { padding: 30%; }
@@ -164,5 +150,151 @@ li { margin: 0.5rem auto; }
     background-size: cover;
     background-position: right 40%;
     clip-path: circle(80% at 100vw 70%);
+}
+
+body { @extend .has-navbar-fixed-top; }
+section:not(#main-title) { @extend .section, .is-medium; }
+footer { @extend .footer, .has-padding-2rem; }
+figure { @extend .image; }
+h1 { @extend .title,    .is-1, .is-size-3-mobile; }
+h2 { @extend .subtitle, .is-2, .is-size-4-mobile; }
+h3 { @extend .subtitle, .is-3, .is-size-5-mobile; }
+h4 { @extend .subtitle, .is-4, .is-size-4-mobile; }
+h5 { @extend .subtitle, .is-5, .is-size-5-mobile; }
+p { @extend .content; }
+
+section:not(#main-title) > div:first-child {
+	@extend .container;
+	> h1:first-child {
+		@extend .is-uppercase;
+	}
+}
+
+nav {
+    @extend .navbar, .is-fixed-top;
+    > div:first-child {
+        @extend .navbar-brand;
+        span { @extend .navbar-item; }
+    }
+    > div:last-child {
+        @extend .navbar-end;
+        div { @extend .field, .is-grouped; }
+        a { @extend .navbar-item; }
+    }
+}
+
+#main-title {
+    @extend 
+        .hero, 
+        .is-fullheight-with-navbar,
+        .has-hero, 
+        .has-hero-background;
+
+    > div {
+        @extend 
+            .has-hero-img,
+            .hero-background,
+            .hero-body,
+            .has-margin-auto,
+            .is-primary;
+    }
+    h1, h2 { @extend .has-text-white, .has-text-shadow-black; }
+    h1 { @extend .is-uppercase, }
+    h2 { @extend .is-capitalized, .subtitle; }
+}
+
+#en-quelques-mots {
+    @extend .is-medium;
+    h1, p {
+        position: relative;
+        top: 20%;
+    }
+    h1 { @extend .is-size-4-mobile, .is-uppercase; }
+    h2 { @extend .is-size-3-mobile; }
+    img { max-width: 80%; }
+    #fanny { 
+        @extend .is-half-touch, .is-one-quarter-desktop;
+        float: right;
+    }
+	> div {
+		@extend .columns;
+		> div { @extend .column; }
+		> div:not(:first-child) { @extend .is-sticky; }
+	}
+}
+
+#professional-experiences {
+	@extend .has-background-primary;
+	> div {
+		h1 { @extend .has-text-white; }
+		> div {
+			@extend .columns;
+			> div { 
+				@extend .column;
+				> div {
+					@extend .box;
+					> div {
+						@extend .container, .is-centered, .has-padding-1rem;
+					}
+				}
+			}
+		}
+	}
+	h4:nth-child(2) { @extend .title; }
+	figure { @extend .is-64x64; }
+}
+
+#competencies {
+    .is-child { text-align: center; }
+    .notification { padding: 3rem 1.5rem; }
+    figure { 
+		@extend .has-padding-20;
+		display: inline-block; 
+	}
+    img { max-width: 12em; }
+	h4 { @extend .title, .is-centered, .has-text-white; }
+	> div {
+		> div {
+			> div:nth-child(1)>div { @extend .is-primary; }
+			> div:nth-child(2)>div { @extend .is-warning; }
+			> div:nth-child(3)>div { @extend .is-link; }
+			> div:nth-child(4)>div { @extend .is-danger; }
+			@extend .tile, .is-ancestor;	
+			> div { 
+				@extend .tile, .is-parent;
+				> div {
+					@extend .tile, .is-child, .notification;
+					padding: 0;
+					> div {
+						@extend .has-text-centered;
+					}
+				}
+			}
+		}
+	}
+}
+
+#portfolio {
+    @extend .has-background-primary;
+	h1 { @extend .has-text-white; }
+	h4 { @extend .title; }
+	#carousel-demo { 
+		@extend .carousel;
+	}
+	div.slider-item {
+		> div {	
+			@extend .carousel-item;
+			> div {
+				@extend .columns, .is-vcentered;
+				> div {
+					@extend .column, .is-half, .has-text-centered;
+				}
+			}
+		}
+	}
+}
+
+#contacts { 
+    @extend .has-hero-img, .has-hero, .outer-hero, .is-large;
 }
 
