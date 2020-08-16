@@ -276,6 +276,22 @@ nav {
 
 #portfolio {
     @extend .has-background-primary;
+	h1 { @extend .has-text-white; }
+	h4 { @extend .title; }
+	#carousel-demo { 
+		@extend .carousel;
+	}
+	div.slider-item {
+		> div {	
+			@extend .carousel-item;
+			> div {
+				@extend .columns, .is-vcentered;
+				> div {
+					@extend .column, .is-half, .has-text-centered;
+				}
+			}
+		}
+	}
 }
 
 #contacts { 
